@@ -375,13 +375,11 @@ def install_desktop(self, desktop, state):
     if desktop == "awesome":
         command = list(np.append(awesome, default_app))
         src.append("/etc/skel/.config/awesome")
-        src.append("/etc/skel/.config/powermenu")
         twm = True
     elif desktop == "bspwm":
         command = list(np.append(bspwm, default_app))
         src.append("/etc/skel/.config/bspwm")
         src.append("/etc/skel/.config/polybar")
-        src.append("/etc/skel/.config/powermenu")
         twm = True
     elif desktop == "budgie-desktop":
         check_package_and_remove(self, "catfish")
@@ -390,28 +388,18 @@ def install_desktop(self, desktop, state):
         command = list(np.append(chadwm, default_app))
         src.append("/etc/skel/.config/arco-chadwm")
         src.append("/etc/skel/.config/eww")
-        src.append("/etc/skel/.config/powermenu")
         twm = True
     elif desktop == "cinnamon":
         command = cinnamon
     elif desktop == "gnome":
         command = gnome
-    elif desktop == "herbstluftwm":
-        command = list(np.append(hlwm, default_app))
-        src.append("/etc/skel/.config/herbstluftwm")
-        src.append("/etc/skel/.config/polybar")
-        src.append("/etc/skel/.config/powermenu")
-        twm = True
     elif desktop == "i3":
         command = list(np.append(i3, default_app))
         src.append("/etc/skel/.config/i3")
-        src.append("/etc/skel/.config/polybar")
-        src.append("/etc/skel/.config/powermenu")
         twm = True
     elif desktop == "leftwm":
         command = list(np.append(leftwm, default_app))
         src.append("/etc/skel/.config/leftwm")
-        src.append("/etc/skel/.config/powermenu")
         twm = True
     elif desktop == "mate":
         command = mate
@@ -424,7 +412,6 @@ def install_desktop(self, desktop, state):
     elif desktop == "qtile":
         command = list(np.append(qtile, default_app))
         src.append("/etc/skel/.config/qtile")
-        src.append("/etc/skel/.config/powermenu")
         twm = True
     elif desktop == "xfce":
         command = list(np.append(xfce, default_app))
@@ -485,15 +472,11 @@ def install_desktop(self, desktop, state):
                 "budgie-desktop",
                 "budgie-extras",
                 "cinnamon",
-                "cutefish",
-                "enlightenment",
                 "gnome-extra",
                 "gnome",
                 "mate-extra",
                 "mate",
-                "pantheon",
                 "plasma",
-                "ukui",
                 "xfce4-goodies",
                 "xfce4",
             ]
