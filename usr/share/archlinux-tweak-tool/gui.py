@@ -201,7 +201,7 @@ themes</i> you can customize <b>fastfetch</b>"
     #                 GRUB
     # ==========================================================
 
-    grub_gui.gui(self, Gtk, vboxstack4, fn)
+    #grub_gui.gui(self, Gtk, vboxstack4, fn)
 
     # ==========================================================
     #                         LOGIN
@@ -284,12 +284,12 @@ themes</i> you can customize <b>fastfetch</b>"
 
     stack.add_titled(vboxstack19, "stack19", "Fixes")  # Fixes
 
-    stack.add_titled(vboxstack4, "stack1", "Grub")  # Grub config
+    #stack.add_titled(vboxstack4, "stack1", "Grub")  # Grub config
 
     if fn.distr != "artix":
         stack.add_titled(vboxstack22, "stack22", "Login")  # Sddm/Lightdm/Lxdm
 
-    stack.add_titled(vboxstack16, "stack16", "Mirrors")  # mirrors
+    #stack.add_titled(vboxstack16, "stack16", "Mirrors")  # mirrors
 
     stack.add_titled(vboxstack26, "packages", "Packages")  # Packages
 

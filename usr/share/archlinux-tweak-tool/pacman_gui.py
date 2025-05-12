@@ -79,7 +79,7 @@ def gui(self, Gtk, vboxstack1, fn):
     label1 = Gtk.Label(xalign=0)
     label1.set_markup("# Enable ArcoLinux testing repo")
 
-    self.arcolinux_button = Gtk.Button(label="Install keys and mirrors")
+    self.arcolinux_button = Gtk.Button(label="Add Arcolinux repos")
     self.arcolinux_button.connect("clicked", self.on_arcolinux_clicked)
 
     self.arepo_button = Gtk.Switch()
@@ -313,13 +313,13 @@ def gui(self, Gtk, vboxstack1, fn):
 
     vboxstack4 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
     vboxstack4.pack_start(hboxstack13, False, False, 10)
-    vboxstack4.pack_start(hboxstack19, False, False, 10)
+    #vboxstack4.pack_start(hboxstack19, False, False, 10)
     # vboxstack4.pack_start(hboxstack20, False, False, 10)
     # if fn.check_package_installed("xerolinux-mirrorlist"):
     #     vboxstack4.pack_start(hboxstack21, False, False, 10)
     #     vboxstack4.pack_start(hboxstack22, False, False, 10)
-    vboxstack4.pack_start(hboxstack23, False, False, 10)
-    vboxstack4.pack_start(hboxstack24, False, False, 10)
+    #vboxstack4.pack_start(hboxstack23, False, False, 10)
+    #vboxstack4.pack_start(hboxstack24, False, False, 10)
     vboxstack4.pack_start(hboxstack11, False, False, 10)
 
     # ========================================================

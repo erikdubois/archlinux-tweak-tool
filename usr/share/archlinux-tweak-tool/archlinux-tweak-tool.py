@@ -3061,9 +3061,9 @@ class Main(Gtk.Window):
 
     def on_arcolinux_clicked(self, widget):
         fn.install_arcolinux(self)
-        print("ArcoLinux keyring and mirrors added")
+        print("ArcoLinux repo added + activated")
         fn.show_in_app_notification(
-            self, "ArcoLinux keyring and mirrors added + activated"
+            self, "ArcoLinux repo added + activated"
         )
         self.on_pacman_atestrepo_toggle(self.atestrepo_button, False)
         self.on_pacman_arepo_toggle(self.arepo_button, True)

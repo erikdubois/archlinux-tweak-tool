@@ -1733,11 +1733,11 @@ def get_shell_config():
         os.path.join(user_home, '.zshrc'),
         os.path.join(user_home, '.config', 'fish', 'config.fish')
     ]
-    
+
     for config in possible_configs:
         if os.path.isfile(config):
             return config
-    
+
     return None
 
 # =====================================================
@@ -1941,91 +1941,32 @@ def install_endeavouros(self):
 
 
 def install_arcolinux(self):
-    base_dir = path.dirname(path.realpath(__file__))
-    pathway = base_dir + "/data/arco/packages/keyring/"
-    file = listdir(pathway)
-
-    try:
-        install = "pacman -U " + pathway + str(file).strip("[]'") + " --noconfirm"
-        print(install)
-        subprocess.call(
-            install.split(" "),
-            shell=False,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
-        )
-        print("ArcoLinux keyring is now installed")
-    except Exception as error:
-        print(error)
-
-    pathway = base_dir + "/data/arco/packages/mirrorlist/"
-    file = listdir(pathway)
-    try:
-        install = "pacman -U " + pathway + str(file).strip("[]'") + " --noconfirm"
-        print(install)
-        subprocess.call(
-            install.split(" "),
-            shell=False,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
-        )
-        print("ArcoLinux mirrorlist is now installed")
-    except Exception as error:
-        print(error)
-
     """add the ArcoLinux repos in /etc/pacman.conf if none are present"""
     if not check_content("arcolinux", pacman):
-        if distr == "arcolinux":
-            print("[INFO] : Adding ArcoLinux repos on ArcoLinux")
-            try:
-                with open(pacman, "r", encoding="utf-8") as f:
-                    lines = f.readlines()
-                    f.close()
-            except Exception as error:
-                print(error)
 
-            text = (
-                "\n\n"
-                + atestrepo_no
-                + "\n\n"
-                + arepo
-                + "\n\n"
-                + a3drepo
-                + "\n\n"
-                + axlrepo
-            )
+        print("[INFO] : Adding ArcoLinux repos")
+        try:
+            with open(pacman, "r", encoding="utf-8") as f:
+                lines = f.readlines()
+                f.close()
+        except Exception as error:
+            print(error)
 
-            pos = get_position(lines, "#[testing]")
-            lines.insert(pos - 2, text)
+        text = (
+            "\n\n"
+            + arepo
+            + "\n\n"
+            + a3drepo
+        )
 
-            try:
-                with open(pacman, "w", encoding="utf-8") as f:
-                    f.writelines(lines)
-            except Exception as error:
-                print(error)
+        pos = get_position(lines, "#[testing]")
+        lines.insert(pos - 2, text)
 
-
-# def install_xerolinux(self):
-#     base_dir = path.dirname(path.realpath(__file__))
-#     pathway = base_dir + "/data/xero/packages/mirrorlist/"
-#     file = listdir(pathway)
-#     try:
-#         install = "pacman -U " + pathway + str(file).strip("[]'") + " --noconfirm"
-#         print(install)
-#         subprocess.call(
-#             install.split(" "),
-#             shell=False,
-#             stdout=subprocess.PIPE,
-#             stderr=subprocess.STDOUT,
-#         )
-#         print("Xerolinux mirrorlist is now installed")
-#     except Exception as error:
-#         print(error)
-
-
-# =====================================================
-#               PERMISSIONS
-# =====================================================
+        try:
+            with open(pacman, "w", encoding="utf-8") as f:
+                f.writelines(lines)
+        except Exception as error:
+            print(error)
 
 
 def test(dst):

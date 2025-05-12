@@ -196,8 +196,8 @@ colors, presets of Xfce4-terminal"
 
     vboxStack7.pack_start(hbox3, False, False, 0)  # lbl1
     vboxStack7.pack_start(hbox4, False, False, 0)  # seperator
-    vboxStack7.pack_start(hbox01, False, False, 0)
-    vboxStack7.pack_start(hbox23, False, False, 0)
+    #vboxStack7.pack_start(hbox01, False, False, 0)
+    #vboxStack7.pack_start(hbox23, False, False, 0)
     vboxStack7.pack_start(hbox02, False, False, 0)
     vboxStack7.pack_start(hbox06, False, False, 0)
     vboxStack7.pack_start(hbox07, False, False, 0)
@@ -208,9 +208,9 @@ colors, presets of Xfce4-terminal"
     vboxStack7.pack_start(hbox2, False, False, 0)
     vboxStack7.pack_start(hbox28, False, False, 0)
     vboxStack7.pack_start(hbox29, False, False, 0)
-    vboxStack7.pack_start(hbox05, False, False, 0)
-    vboxStack7.pack_start(hbox24, False, False, 0)
-    vboxStack7.pack_start(hbox21, False, False, 0)
-    vboxStack7.pack_start(hbox22, False, False, 0)
-    vboxStack7.pack_start(hbox19, False, False, 0)
-    vboxStack7.pack_start(hbox20, False, False, 0)
+    #vboxStack7.pack_start(hbox05, False, False, 0)
+    #vboxStack7.pack_start(hbox24, False, False, 0)
+    #vboxStack7.pack_start(hbox21, False, False, 0)
+    #vboxStack7.pack_start(hbox22, False, False, 0)
+    #vboxStack7.pack_start(hbox19, False, False, 0)
+    #vboxStack7.pack_start(hbox20, False, False, 0)
