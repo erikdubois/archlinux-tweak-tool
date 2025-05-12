@@ -3100,11 +3100,11 @@ class Main(Gtk.Window):
                 if fn.check_arco_repos_active() is True:
                     self.button_install.set_sensitive(True)
                     self.button_reinstall.set_sensitive(True)
-                    self.install_arco_vimix.set_sensitive(True)
+                    #self.install_arco_vimix.set_sensitive(True)
                 else:
                     self.button_install.set_sensitive(False)
                     self.button_reinstall.set_sensitive(False)
-                    self.install_arco_vimix.set_sensitive(False)
+                    #self.install_arco_vimix.set_sensitive(False)
         utilities.set_util_state_arco_switch(self)
 
     def on_pacman_a3p_toggle(self, widget, active):
