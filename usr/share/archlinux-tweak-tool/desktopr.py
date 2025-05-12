@@ -55,7 +55,7 @@ copy = ["cp", "-Rv"]
 if fn.distr:
     awesome = [
         "alacritty",
-        "edu-awesome",
+        "edu-awesome-git",
         "autorandr",
         "awesome",
         "dmenu",
@@ -75,20 +75,10 @@ if fn.distr:
     ]
     bspwm = [
         "alacritty",
-        "arcolinux-bspwm-git",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-local-xfce4-git",
+        "edu-bspwm-git",
         "archlinux-logout-git",
-        "arcolinux-polybar-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
+        "edu-rofi-git",
+        "edu-rofi-themes-git",
         "awesome-terminal-fonts",
         "bspwm",
         "dmenu",
@@ -130,7 +120,7 @@ if fn.distr:
         "archlinux-logout-git",
         "edu-rofi-git",
         "edu-rofi-themes-git",
-        "edu-xfce",
+        "edu-xfce-git",
         "dmenu",
         "feh",
         "lxappearance",
@@ -368,7 +358,6 @@ def install_desktop(self, desktop, state):
     if fn.distr == "archcraft":
         fn.clear_skel_directory()
 
-    check_package_and_remove(self, "rofi")
     check_package_and_remove(self, "rofi-lbonn-wayland-git")
     check_package_and_remove(self, "rofi-lbonn-wayland-only-git")
 
