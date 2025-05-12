@@ -76,6 +76,7 @@ if fn.distr:
     bspwm = [
         "alacritty",
         "edu-bspwm-git",
+        "edu-polybar-git",
         "archlinux-logout-git",
         "edu-rofi-git",
         "edu-rofi-themes-git",
@@ -180,6 +181,7 @@ if fn.distr:
         "alacritty",
         "archlinux-logout-git",
         "edu-leftwm-git",
+        "edu-polybar-git",
         "edu-rofi-git",
         "edu-rofi-themes-git",
         "edu-xfce-git",
