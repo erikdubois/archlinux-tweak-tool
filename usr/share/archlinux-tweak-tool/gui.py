@@ -207,7 +207,7 @@ themes</i> you can customize <b>fastfetch</b>"
     #                         LOGIN
     # ==========================================================
 
-    login_gui.gui(self, Gtk, vboxstack22, sddm, lightdm, lxdm, fn, login)
+    #login_gui.gui(self, Gtk, vboxstack22, sddm, lightdm, lxdm, fn, login)
 
     # ==========================================================
     #                 PACMAN
@@ -250,7 +250,7 @@ themes</i> you can customize <b>fastfetch</b>"
     # #               TERMINAL FUN
     # # ==========================================================
 
-    utilities_gui.gui(self, Gtk, vboxstack20, fn)
+    #utilities_gui.gui(self, Gtk, vboxstack20, fn)
 
     # ==========================================================
     #                 THEMES
@@ -286,8 +286,8 @@ themes</i> you can customize <b>fastfetch</b>"
 
     #stack.add_titled(vboxstack4, "stack1", "Grub")  # Grub config
 
-    if fn.distr != "artix":
-        stack.add_titled(vboxstack22, "stack22", "Login")  # Sddm/Lightdm/Lxdm
+    #if fn.distr != "artix":
+    #    stack.add_titled(vboxstack22, "stack22", "Login")  # Sddm/Lightdm/Lxdm
 
     #stack.add_titled(vboxstack16, "stack16", "Mirrors")  # mirrors
 
@@ -306,7 +306,7 @@ themes</i> you can customize <b>fastfetch</b>"
 
     stack.add_titled(vboxstack7, "stack8", "Terminals")  # Terminals
 
-    stack.add_titled(vboxstack20, "stack20", "Terminal Fun")  # lolcat and others
+    #stack.add_titled(vboxstack20, "stack20", "Terminal Fun")  # lolcat and others
 
     stack.add_titled(vboxstack10, "stack11", "Themer")  # Themer
 

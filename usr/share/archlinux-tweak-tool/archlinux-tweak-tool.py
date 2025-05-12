@@ -838,82 +838,82 @@ class Main(Gtk.Window):
 
         # ========================FASTFETCH LOLCAT TOGGLE===================
 
-        shell = fn.get_shell()
+        # shell = fn.get_shell()
 
-        if shell in ("zsh", "bash", "fish"):
-            # ========================TERMINAL UTILITIES TOGGLES========================
-            # screenfetch
-            self.screenfetch_lolcat.set_active(
-                utilities.get_term_rc("screenfetch | lolcat")
-            )
-            self.screenfetch_util.set_active(utilities.get_term_rc("screenfetch"))
-            # ufetch
-            self.ufetch_lolcat.set_active(utilities.get_term_rc("ufetch | lolcat"))
-            self.ufetch_util.set_active(utilities.get_term_rc("ufetch"))
-            # ufetch-arco
-            self.ufetch_arco_lolcat.set_active(
-                utilities.get_term_rc("ufetch-arco | lolcat")
-            )
-            self.ufetch_arco_util.set_active(utilities.get_term_rc("ufetch-arco"))
-            # pfetch
-            self.pfetch_lolcat.set_active(utilities.get_term_rc("pfetch | lolcat"))
-            self.pfetch_util.set_active(utilities.get_term_rc("pfetch"))
-            # paleofetch
-            self.paleofetch_lolcat.set_active(
-                utilities.get_term_rc("paleofetch | lolcat")
-            )
-            self.paleofetch_util.set_active(utilities.get_term_rc("paleofetch"))
-            # alsi
-            self.alsi_lolcat.set_active(utilities.get_term_rc("alsi | lolcat"))
-            self.alsi_util.set_active(utilities.get_term_rc("alsi"))
-            # hfetch
-            self.hfetch_lolcat.set_active(utilities.get_term_rc("hfetch | lolcat"))
-            self.hfetch_util.set_active(utilities.get_term_rc("hfetch"))
-            # sfetch
-            self.sfetch_lolcat.set_active(utilities.get_term_rc("sfetch | lolcat"))
-            self.sfetch_util.set_active(utilities.get_term_rc("sfetch"))
-            # sysinfo
-            self.sysinfo_lolcat.set_active(utilities.get_term_rc("sysinfo | lolcat"))
-            self.sysinfo_util.set_active(utilities.get_term_rc("sysinfo"))
-            # fetch
-            self.fetch_lolcat.set_active(utilities.get_term_rc("fetch | lolcat"))
-            self.fetch_util.set_active(utilities.get_term_rc("fetch"))
-            # sysinfo-retro
-            self.sysinfo_retro_lolcat.set_active(
-                utilities.get_term_rc("sysinfo-retro | lolcat")
-            )
-            self.sysinfo_retro_util.set_active(utilities.get_term_rc("sysinfo-retro"))
-            # cpufetch
-            self.cpufetch_lolcat.set_active(utilities.get_term_rc("cpufetch | lolcat"))
-            self.cpufetch_util.set_active(utilities.get_term_rc("cpufetch"))
-            # hyfetch
-            self.hyfetch_lolcat.set_active(utilities.get_term_rc("hyfetch | lolcat"))
-            self.hyfetch_util.set_active(utilities.get_term_rc("hyfetch"))
-            # colorscripts
-            self.colorscript.set_active(utilities.get_term_rc("colorscript random"))
+        # if shell in ("zsh", "bash", "fish"):
+        #     # ========================TERMINAL UTILITIES TOGGLES========================
+        #     # screenfetch
+        #     self.screenfetch_lolcat.set_active(
+        #         utilities.get_term_rc("screenfetch | lolcat")
+        #     )
+        #     self.screenfetch_util.set_active(utilities.get_term_rc("screenfetch"))
+        #     # ufetch
+        #     self.ufetch_lolcat.set_active(utilities.get_term_rc("ufetch | lolcat"))
+        #     self.ufetch_util.set_active(utilities.get_term_rc("ufetch"))
+        #     # ufetch-arco
+        #     self.ufetch_arco_lolcat.set_active(
+        #         utilities.get_term_rc("ufetch-arco | lolcat")
+        #     )
+        #     self.ufetch_arco_util.set_active(utilities.get_term_rc("ufetch-arco"))
+        #     # pfetch
+        #     self.pfetch_lolcat.set_active(utilities.get_term_rc("pfetch | lolcat"))
+        #     self.pfetch_util.set_active(utilities.get_term_rc("pfetch"))
+        #     # paleofetch
+        #     self.paleofetch_lolcat.set_active(
+        #         utilities.get_term_rc("paleofetch | lolcat")
+        #     )
+        #     self.paleofetch_util.set_active(utilities.get_term_rc("paleofetch"))
+        #     # alsi
+        #     self.alsi_lolcat.set_active(utilities.get_term_rc("alsi | lolcat"))
+        #     self.alsi_util.set_active(utilities.get_term_rc("alsi"))
+        #     # hfetch
+        #     self.hfetch_lolcat.set_active(utilities.get_term_rc("hfetch | lolcat"))
+        #     self.hfetch_util.set_active(utilities.get_term_rc("hfetch"))
+        #     # sfetch
+        #     self.sfetch_lolcat.set_active(utilities.get_term_rc("sfetch | lolcat"))
+        #     self.sfetch_util.set_active(utilities.get_term_rc("sfetch"))
+        #     # sysinfo
+        #     self.sysinfo_lolcat.set_active(utilities.get_term_rc("sysinfo | lolcat"))
+        #     self.sysinfo_util.set_active(utilities.get_term_rc("sysinfo"))
+        #     # fetch
+        #     self.fetch_lolcat.set_active(utilities.get_term_rc("fetch | lolcat"))
+        #     self.fetch_util.set_active(utilities.get_term_rc("fetch"))
+        #     # sysinfo-retro
+        #     self.sysinfo_retro_lolcat.set_active(
+        #         utilities.get_term_rc("sysinfo-retro | lolcat")
+        #     )
+        #     self.sysinfo_retro_util.set_active(utilities.get_term_rc("sysinfo-retro"))
+        #     # cpufetch
+        #     self.cpufetch_lolcat.set_active(utilities.get_term_rc("cpufetch | lolcat"))
+        #     self.cpufetch_util.set_active(utilities.get_term_rc("cpufetch"))
+        #     # hyfetch
+        #     self.hyfetch_lolcat.set_active(utilities.get_term_rc("hyfetch | lolcat"))
+        #     self.hyfetch_util.set_active(utilities.get_term_rc("hyfetch"))
+        #     # colorscripts
+        #     self.colorscript.set_active(utilities.get_term_rc("colorscript random"))
 
-            # fastfetch
-            # Disable signals temporarily to prevent triggering on initialization
-            self.fast_util.handler_block_by_func(self.on_fast_util_toggled)
-            self.fast_lolcat.handler_block_by_func(self.on_fast_lolcat_toggled)
+        #     # fastfetch
+        #     # Disable signals temporarily to prevent triggering on initialization
+        #     self.fast_util.handler_block_by_func(self.on_fast_util_toggled)
+        #     self.fast_lolcat.handler_block_by_func(self.on_fast_lolcat_toggled)
 
-            # Initialize fastfetch and lolcat switches
-            fastfetch_enabled = utilities.get_term_rc("fastfetch")
-            lolcat_enabled = utilities.get_term_rc("fastfetch | lolcat")
+        #     # Initialize fastfetch and lolcat switches
+        #     fastfetch_enabled = utilities.get_term_rc("fastfetch")
+        #     lolcat_enabled = utilities.get_term_rc("fastfetch | lolcat")
 
-            self.fast_util.set_active(fastfetch_enabled)
-            self.fast_lolcat.set_active(lolcat_enabled)
+        #     self.fast_util.set_active(fastfetch_enabled)
+        #     self.fast_lolcat.set_active(lolcat_enabled)
 
-            # Set sensitivity: lolcat should only be sensitive if fastfetch is active
-            self.fast_lolcat.set_sensitive(fastfetch_enabled)
+        #     # Set sensitivity: lolcat should only be sensitive if fastfetch is active
+        #     self.fast_lolcat.set_sensitive(fastfetch_enabled)
 
-            # Re-enable signals after initialization
-            self.fast_util.handler_unblock_by_func(self.on_fast_util_toggled)
-            self.fast_lolcat.handler_unblock_by_func(self.on_fast_lolcat_toggled)
+        #     # Re-enable signals after initialization
+        #     self.fast_util.handler_unblock_by_func(self.on_fast_util_toggled)
+        #     self.fast_lolcat.handler_unblock_by_func(self.on_fast_lolcat_toggled)
 
-            # Connect toggle handlers
-            self.fast_util.connect("notify::active", self.on_fast_util_toggled)
-            self.fast_lolcat.connect("notify::active", self.on_fast_lolcat_toggled)
+        #     # Connect toggle handlers
+        #     self.fast_util.connect("notify::active", self.on_fast_util_toggled)
+        #     self.fast_lolcat.connect("notify::active", self.on_fast_lolcat_toggled)
 
         # =====================================================
         #                     LIGHTDM
@@ -985,7 +985,7 @@ class Main(Gtk.Window):
         # =====================================================
 
         # check if arco repos are active else no switch
-        utilities.set_util_state_arco_switch(self)
+        #utilities.set_util_state_arco_switch(self)
 
         # =====================================================
         #     IF ALL THIS IS DONE - DESTROY SPLASH SCREEN
@@ -3105,7 +3105,7 @@ class Main(Gtk.Window):
                     self.button_install.set_sensitive(False)
                     self.button_reinstall.set_sensitive(False)
                     #self.install_arco_vimix.set_sensitive(False)
-        utilities.set_util_state_arco_switch(self)
+        #utilities.set_util_state_arco_switch(self)
 
     def on_pacman_a3p_toggle(self, widget, active):
         if not pmf.repo_exist("[arcolinux_repo_3party]"):

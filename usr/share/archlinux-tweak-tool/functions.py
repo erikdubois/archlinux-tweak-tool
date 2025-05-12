@@ -1431,7 +1431,7 @@ def set_hblock(self, toggle, state):
         shutil.copy("/etc/hosts", "/etc/hosts.bak")
 
     try:
-        install = "pacman -S arcolinux-hblock-git --needed --noconfirm"
+        install = "pacman -S edu-hblock-git --needed --noconfirm"
         enable = "/usr/bin/hblock"
 
         if state:
@@ -2601,9 +2601,9 @@ def install_arco_thunar_plugin(self, widget):
                 "Thunar-shares-plugin is now installed - reboot",
             )
             print("Other apps that might be interesting for sharing are :")
-            print(" - arcolinux-nemo-share (cinnamon)")
-            print(" - arcolinux-caja-share (mate)")
-            print(" - arcolinux-nautilus-share (gnome - budgie)")
+            print(" - nemo-share (cinnamon)")
+            print(" - caja-share (mate)")
+            print(" - nautilus-share (gnome - budgie)")
             print(" - kdenetwork-filesharing (plasma)")
 
         except Exception as error:
