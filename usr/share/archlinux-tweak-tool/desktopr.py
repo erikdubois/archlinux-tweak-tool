@@ -23,40 +23,17 @@ default_app = ["nano", "ttf-hack"]
 
 desktops = [
     "awesome",
-    "berry",
     "bspwm",
     "budgie-desktop",
     "cinnamon",
     "chadwm",
-    "cutefish-xsession",
-    "cwm",
-    "fvwm3",
-    "dk",
-    "dusk",
-    "dwm",
-    "enlightenment",
     "gnome",
-    "herbstluftwm",
-    "hyprland",
     "i3",
-    "icewm",
-    "jwm",
     "leftwm",
-    "lxqt",
     "mate",
-    "nimdow",
-    "niri",
-    "openbox",
-    "pantheon",
     "plasma",
     "qtile",
-    "spectrwm",
-    "ukui",
-    "wayfire",
-    "wmderland",
-    "worm",
     "xfce",
-    "xmonad",
 ]
 pkexec = ["pkexec", "pacman", "-S", "--needed", "--noconfirm", "--ask=4"]
 pkexec_reinstall = ["pkexec", "pacman", "-S", "--noconfirm", "--ask=4"]
@@ -78,66 +55,21 @@ copy = ["cp", "-Rv"]
 if fn.distr:
     awesome = [
         "alacritty",
-        "arcolinux-awesome-git",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
+        "edu-awesome",
         "autorandr",
         "awesome",
         "dmenu",
         "feh",
-        "gvfs",
         "lxappearance",
         "noto-fonts",
         "picom-git",
         "polkit-gnome",
-        "rofi-lbonn-wayland",
+        "rofi",
         "thunar",
         "thunar-archive-plugin",
         "thunar-volman",
         "ttf-hack",
         "vicious",
-        "volumeicon",
-        "xfce4-terminal",
-    ]
-    berry = [
-        "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-berry-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-polybar-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "awesome-terminal-fonts",
-        "dmenu",
-        "feh",
-        "berry-dev-git",
-        "lxappearance",
-        "picom-git",
-        "polkit-gnome",
-        "polybar",
-        "rofi-lbonn-wayland",
-        "sxhkd",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
         "volumeicon",
         "xfce4-terminal",
     ]
@@ -161,12 +93,11 @@ if fn.distr:
         "bspwm",
         "dmenu",
         "feh",
-        "gvfs",
         "lxappearance",
         "picom-git",
         "polybar",
         "polkit-gnome",
-        "rofi-lbonn-wayland",
+        "rofi",
         "sutils-git",
         "sxhkd",
         "thunar",
@@ -178,58 +109,34 @@ if fn.distr:
         "xtitle-git",
     ]
     budgie = [
-        "arcolinux-budgie-dconf-git",
-        "arcolinux-budgie-git",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-guake-autostart-git",
-        "arcolinux-root-git",
-        "arconet-wallpapers",
         "budgie-desktop",
         "budgie-extras",
         "dconf-editor",
-        "gvfs",
         "guake",
         "ttf-hack",
     ]
     cinnamon = [
-        "arcolinux-cinnamon-dconf-git",
-        "arcolinux-cinnamon-git",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-root-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
         "cinnamon",
         "cinnamon-translations",
         "gnome-screenshot",
         "gnome-system-monitor",
         "gnome-terminal",
-        "gvfs",
         "iso-flag-png",
         "mintlocale",
         "nemo-fileroller",
-        "xfce4-terminal",
     ]
     chadwm = [
         "alacritty",
-        "arcolinux-chadwm-git",
-        "arcolinux-local-xfce4-git",
         "archlinux-logout-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
+        "edu-rofi-git",
+        "edu-rofi-themes-git",
+        "edu-xfce",
         "dmenu",
         "feh",
-        "gvfs",
         "lxappearance",
         "picom-git",
         "polkit-gnome",
-        "rofi-lbonn-wayland",
+        "rofi",
         "sxhkd",
         "thunar",
         "thunar-archive-plugin",
@@ -245,299 +152,25 @@ if fn.distr:
         "xfce4-taskmanager",
         "xfce4-terminal",
     ]
-    cutefish = [
-        "cutefish",
-        "arcolinux-cutefish-git",
-    ]
-    cwm = [
-        "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-cwm-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-polybar-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "awesome-terminal-fonts",
-        "autorandr",
-        "cwm",
-        "dmenu",
-        "feh",
-        "gvfs",
-        "lxappearance",
-        "picom-git",
-        "polybar",
-        "sxhkd",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "volumeicon",
-        "xfce4-terminal",
-    ]
-    dk = [
-        "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-dk-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "dmenu",
-        "dk",
-        "feh",
-        "gvfs",
-        "lxappearance",
-        "nerd-fonts-source-code-pro",
-        "picom-git",
-        "polkit-gnome",
-        "polybar",
-        "rofi-lbonn-wayland",
-        "sxhkd",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "volumeicon",
-        "xfce4-notifyd",
-        "xfce4-power-manager",
-        "xfce4-screenshooter",
-        "xfce4-settings",
-        "xfce4-taskmanager",
-        "xfce4-terminal",
-    ]
-    dusk = [
-        "alacritty",
-        "a-candy-beauty-icon-theme-git",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-dwm-st-git",
-        "arcolinux-dusk-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "dmenu",
-        "feh",
-        "gvfs",
-        "lxappearance",
-        "picom-git",
-        "polkit-gnome",
-        "sxhkd",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "volumeicon",
-        "xfce4-notifyd",
-        "xfce4-power-manager",
-        "xfce4-screenshooter",
-        "xfce4-settings",
-        "xfce4-taskmanager",
-        "xfce4-terminal",
-    ]
-    dwm = [
-        "alacritty",
-        "a-candy-beauty-icon-theme-git",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-dwm-git",
-        "arcolinux-dwm-slstatus-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "dmenu",
-        "feh",
-        "gvfs",
-        "gsimplecal",
-        "lxappearance",
-        "picom-git",
-        "polkit-gnome",
-        "rofi-lbonn-wayland",
-        "sxhkd",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "volumeicon",
-        "xfce4-notifyd",
-        "xfce4-power-manager",
-        "xfce4-screenshooter",
-        "xfce4-settings",
-        "xfce4-taskmanager",
-        "xfce4-terminal",
-    ]
-    enlightenment = [
-        "enlightenment",
-    ]
-    fvwm3 = [
-        "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-fvwm3-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-polybar-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "autorandr",
-        "dmenu",
-        "feh",
-        "fvwm3-git",
-        "gvfs",
-        "gsimplecal",
-        "lxappearance",
-        "picom-git",
-        "polybar",
-        "polkit-gnome",
-        "rofi-lbonn-wayland",
-        "sxhkd",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "volumeicon",
-        "xfce4-notifyd",
-        "xfce4-power-manager",
-        "xfce4-screenshooter",
-        "xfce4-settings",
-        "xfce4-taskmanager",
-        "xfce4-terminal",
-    ]
     gnome = [
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-gnome-dconf-git",
-        "arcolinux-gnome-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-guake-autostart-git",
-        "arcolinux-root-git",
-        "arconet-wallpapers",
         "dconf-editor",
         "extension-manager",
         "file-roller",
         "gnome",
         "gnome-tweaks",
         "guake",
-        "gvfs",
         "ttf-hack",
-    ]
-    hlwm = [
-        "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-herbstluftwm-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-polybar-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "awesome-terminal-fonts",
-        "dmenu",
-        "feh",
-        "gvfs",
-        "herbstluftwm",
-        "lxappearance",
-        "picom-git",
-        "polkit-gnome",
-        "polybar",
-        "rofi-lbonn-wayland",
-        "sxhkd",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "volumeicon",
-        "xfce4-terminal",
-        "xtitle-git",
-    ]
-    hyprland = [
-        "archlinux-logout-git",
-        "arcolinux-alacritty-git",
-        "arcolinux-hyprland-git",
-        "arcolinux-kitty-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-pywal-cache-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-wayland-app-hooks-git",
-        "arconet-xfce",
-        "btop",
-        "grim",
-        "hyprcursor",
-        "hyprland",
-        "hyprlang",
-        "hyprutils",
-        "hyprwayland-scanner",
-        "kitty",
-        "lxappearance",
-        "mako",
-        "micro",
-        "pamixer",
-        "pulsemixer",
-        "python-pywal",
-        "rofi-lbonn-wayland",
-        "swaybg",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-jetbrains-mono-nerd",
-        "uwsm",
-        "waybar-git",
-        "wofi",
-        "xfce4-terminal",
     ]
     i3 = [
         "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-i3wm-git",
-        "arcolinux-local-xfce4-git",
+        "edu-i3-git",
         "archlinux-logout-git",
-        "arcolinux-nitrogen-git",
-        "arcolinux-polybar-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
+        "edu-rofi-git",
+        "edu-rofi-themes-git",
+        "edu-xfce-git",
         "autotiling",
         "dmenu",
         "feh",
-        "gvfs",
         "i3blocks",
         "i3-wm",
         "i3status",
@@ -545,105 +178,23 @@ if fn.distr:
         "nitrogen",
         "picom-git",
         "polkit-gnome",
-        "polybar",
-        "rofi-lbonn-wayland",
+        "rofi",
         "thunar",
         "thunar-archive-plugin",
         "thunar-volman",
         "ttf-hack",
         "volumeicon",
-        "xfce4-terminal",
-    ]
-    icewm = [
-        "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-icewm-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "autorandr",
-        "dmenu",
-        "feh",
-        "gvfs",
-        "icewm",
-        "lxappearance",
-        "picom-git",
-        "polkit-gnome",
-        "rofi-lbonn-wayland",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "volumeicon",
-        "xdgmenumaker-git",
-        "xfce4-notifyd",
-        "xfce4-power-manager",
-        "xfce4-screenshooter",
-        "xfce4-settings",
-        "xfce4-taskmanager",
-        "xfce4-terminal",
-    ]
-    jwm = [
-        "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-jwm-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "autorandr",
-        "dmenu",
-        "feh",
-        "gvfs",
-        "jwm",
-        "lxappearance",
-        "picom-git",
-        "polkit-gnome",
-        "rofi-lbonn-wayland",
-        "sxhkd",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "volumeicon",
-        "xdgmenumaker-git",
-        "xfce4-notifyd",
-        "xfce4-screenshooter",
-        "xfce4-taskmanager",
         "xfce4-terminal",
     ]
     leftwm = [
         "alacritty",
-        "a-candy-beauty-icon-theme-git",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-local-xfce4-git",
         "archlinux-logout-git",
-        "arcolinux-leftwm-git",
-        "arcolinux-polybar-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
+        "edu-leftwm-git",
+        "edu-rofi-git",
+        "edu-rofi-themes-git",
+        "edu-xfce-git",
         "dmenu",
         "feh",
-        "gvfs",
         "leftwm-git",
         "leftwm-theme-git",
         "lxappearance",
@@ -651,7 +202,7 @@ if fn.distr:
         "picom-git",
         "polybar",
         "polkit-gnome",
-        "rofi-lbonn-wayland",
+        "rofi",
         "rofi-theme-fonts",
         "sxhkd",
         "thunar",
@@ -667,179 +218,14 @@ if fn.distr:
         "xfce4-taskmanager",
         "xfce4-terminal",
     ]
-    lxqt = [
-        "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-lxqt-git",
-        "arcolinux-root-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "dmenu",
-        "gvfs",
-        "ksuperkey",
-        "lxqt",
-        "lxqt-arc-dark-theme-git",
-        "obconf-qt",
-        "picom-git",
-        "polkit-gnome",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "xfce4-screenshooter",
-        "xfce4-taskmanager",
-        "xfce4-terminal",
-        "xscreensaver",
-    ]
     mate = [
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-mate-dconf-git",
-        "arcolinux-mate-git",
-        "arcolinux-root-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "dmenu",
-        "gnome-screenshot",
-        "gvfs",
         "mate",
         "mate-extra",
         "mate-tweak",
-        "xfce4-terminal",
-    ]
-    nimdow = [
-        "archlinux-logout-git",
-        "arcolinux-btop-git",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-nimdow-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-powermenu-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "btop",
-        "gvfs",
-        "dex",
-        "dmenu",
-        "lxappearance",
-        "nim",
-        "nimdow-bin",
-        "picom-git",
-        "rofi-lbonn-wayland",
-        "rofi-theme-fonts",
-        "sxhkd",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-jetbrains-mono-nerd",
-        "xfce4-terminal",
-        "xorg-xsetroot",
-    ]
-    niri = [
-        "archlinux-logout-git",
-        "arcolinux-alacritty-git",
-        "arcolinux-niri-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-pywal-cache-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-wayland-app-hooks-git",
-        "arconet-xfce",
-        "btop",
-        "dex",
-        "grim",
-        "niri",
-        "lxappearance",
-        "mako",
-        "micro",
-        "pamixer",
-        "python-pywal",
-        "pulsemixer",
-        "rofi-lbonn-wayland",
-        "swaybg",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-jetbrains-mono-nerd",
-        "waybar-git",
-        "wofi",
-        "xwayland-satellite",
-        "yad",
-    ]
-    openbox = [
-        "alacritty",
-        "arcolinux-common-git",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-docs-git",
-        "arcolinux-geany-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-nitrogen-git",
-        "arcolinux-obmenu-generator-git",
-        "arcolinux-openbox-git",
-        "arcolinux-pipemenus-git",
-        "arcolinux-plank-git",
-        "arcolinux-plank-themes-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-tint2-git",
-        "arcolinux-tint2-themes-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "dmenu",
-        "feh",
-        "geany",
-        "gnome-screenshot",
-        "gvfs",
-        "gsimplecal",
-        "gtk2-perl",
-        "lxappearance-obconf",
-        "lxrandr",
-        "nitrogen",
-        "obconf",
-        "obmenu-generator",
-        "obmenu3",
-        "openbox",
-        "openbox-arc-git",
-        "openbox-themes-pambudi-git",
-        "perl-linux-desktopfiles",
-        "picom-git",
-        "plank",
-        "polkit-gnome",
-        "rofi-lbonn-wayland",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "tint2",
-        "ttf-hack",
-        "volumeicon",
-        "xcape",
-        "xfce4-screenshooter",
-        "xfce4-settings",
-        "xfce4-taskmanager",
-        "xfce4-terminal",
-        "yad",
-    ]
-    pantheon = [
-        "pantheon",
     ]
     plasma = [
         "plasma",
         "kde-system-meta",
-        "arcolinux-arc-kde",
-        "arcolinux-root-git",
-        "arconet-wallpapers",
         "ark",
         "breeze",
         "cryfs",
@@ -849,7 +235,6 @@ if fn.distr:
         "encfs",
         "ffmpegthumbs",
         "gocryptfs",
-        "gvfs",
         "gwenview",
         "kate",
         "kde-gtk-config",
@@ -866,186 +251,27 @@ if fn.distr:
     ]
     qtile = [
         "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-local-xfce4-git",
         "archlinux-logout-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-qtile-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
+        "edu-qtile-git",
+        "edu-rofi-git",
+        "edu-rofi-themes-git",
+        "edu-xfce-git",
         "awesome-terminal-fonts",
         "dmenu",
         "feh",
-        "gvfs",
         "lxappearance",
         "picom-git",
         "polkit-gnome",
         "python-setuptools",
         "python-psutil",
         "qtile",
-        "rofi-lbonn-wayland",
+        "rofi",
         "thunar",
         "thunar-archive-plugin",
         "thunar-volman",
         "ttf-hack",
         "volumeicon",
         "xfce4-terminal",
-    ]
-    spectrwm = [
-        "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-polybar-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-spectrwm-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "awesome-terminal-fonts",
-        "dmenu",
-        "feh",
-        "gvfs",
-        "lxappearance",
-        "picom-git",
-        "polkit-gnome",
-        "polybar",
-        "python-psutil",
-        "spectrwm",
-        "sutils-git",
-        "sxhkd",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "volumeicon",
-        "xdo",
-        "xfce4-terminal",
-        "xtitle-git",
-    ]
-    wayfire = [
-        "a-candy-beauty-icon-theme-git",
-        "archlinux-logout-git",
-        "arcolinux-alacritty-git",
-        "arcolinux-foot-git",
-        "arcolinux-kitty-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-pywal-cache-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-wallpapers-wayfire-git",
-        "arcolinux-wayfire-git",
-        "arcolinux-wayland-app-hooks-git",
-        "arconet-xfce",
-        "btop",
-        "feh",
-        "foot",
-        "grim",
-        "kitty",
-        "libliftoff",
-        "lxappearance",
-        "mako",
-        "micro",
-        "pamixer",
-        "python-pywal",
-        "pulsemixer",
-        "polkit-gnome",
-        "rofi-lbonn-wayland",
-        "slurp",
-        "swaybg",
-        "swayidle",
-        "swaylock",
-        "swww",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-jetbrains-mono-nerd",
-        "waybar-git",
-        "wayfire-git",
-        "wayfire-plugins-extra-git",
-        "wcm-git",
-        "wf-kill-git",
-        "wf-shell-git",
-        "wl-clipboard",
-        "wofi",
-        "xfce4-terminal",
-    ]
-    wmderland = [
-        "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-wmderland-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-polybar-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "dmenu",
-        "feh",
-        "lxappearance",
-        "picom-git",
-        "polkit-gnome",
-        "polybar",
-        "rofi-lbonn-wayland",
-        "sxhkd",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "volumeicon",
-        "wmderland-git",
-        "xfce4-terminal",
-    ]
-    worm = [
-        "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-worm-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-polybar-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "dmenu",
-        "feh",
-        "lxappearance",
-        "picom-git",
-        "polkit-gnome",
-        "polybar",
-        "rofi-lbonn-wayland",
-        "sxhkd",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "volumeicon",
-        "worm-dev-git",
-        "xfce4-terminal",
-    ]
-    ukui = [
-        "arcolinux-root-git",
-        "arcolinux-ukui-git",
-        "gvfs",
-        "ukui",
     ]
     xfce = [
         "alacritty",
@@ -1053,57 +279,10 @@ if fn.distr:
         "xfce4-goodies",
         "catfish",
         "dmenu",
-        "gvfs",
         "mugshot",
         "polkit-gnome",
         "ttf-hack",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-root-git",
-        "arconet-xfce",
-        "arconet-wallpapers",
     ]
-    xmonad = [
-        "alacritty",
-        "arcolinux-config-all-desktops-git",
-        "arcolinux-dconf-all-desktops-git",
-        "arcolinux-gtk-surfn-arc-git",
-        "arcolinux-local-xfce4-git",
-        "archlinux-logout-git",
-        "arcolinux-polybar-git",
-        "arcolinux-powermenu-git",
-        "arcolinux-rofi-git",
-        "arcolinux-rofi-themes-git",
-        "arcolinux-root-git",
-        "arcolinux-volumeicon-git",
-        "arconet-wallpapers",
-        "arconet-xfce",
-        "arcolinux-xmonad-polybar-git",
-        "awesome-terminal-fonts",
-        "dmenu",
-        "feh",
-        "gvfs",
-        "haskell-dbus",
-        "lxappearance",
-        "perl-checkupdates-aur",
-        "perl-www-aur",
-        "picom-git",
-        "polybar",
-        "rofi-lbonn-wayland",
-        "thunar",
-        "thunar-archive-plugin",
-        "thunar-volman",
-        "ttf-hack",
-        "volumeicon",
-        "xfce4-terminal",
-        "xmonad",
-        "xmonad-contrib",
-        "xmonad-log",
-        "xmonad-utils",
-    ]
-
 
 def check_desktop(desktop):
     """check if desktop is installed"""
@@ -1198,12 +377,6 @@ def install_desktop(self, desktop, state):
         src.append("/etc/skel/.config/awesome")
         src.append("/etc/skel/.config/powermenu")
         twm = True
-    elif desktop == "berry":
-        command = list(np.append(berry, default_app))
-        src.append("/etc/skel/.config/berry")
-        src.append("/etc/skel/.config/polybar")
-        src.append("/etc/skel/.config/powermenu")
-        twm = True
     elif desktop == "bspwm":
         command = list(np.append(bspwm, default_app))
         src.append("/etc/skel/.config/bspwm")
@@ -1213,10 +386,6 @@ def install_desktop(self, desktop, state):
     elif desktop == "budgie-desktop":
         check_package_and_remove(self, "catfish")
         command = budgie
-    elif desktop == "cutefish-xsession":
-        command = cutefish
-        src.append("/etc/skel/.config/cutefishos")
-        twm = True
     elif desktop == "chadwm":
         command = list(np.append(chadwm, default_app))
         src.append("/etc/skel/.config/arco-chadwm")
@@ -1225,36 +394,6 @@ def install_desktop(self, desktop, state):
         twm = True
     elif desktop == "cinnamon":
         command = cinnamon
-    elif desktop == "cwm":
-        command = list(np.append(cwm, default_app))
-        src.append("/etc/skel/.config/cwm")
-        src.append("/etc/skel/.cwmrc")
-        src.append("/etc/skel/.xprofile")
-        src.append("/etc/skel/.config/polybar")
-        twm = True
-    elif desktop == "dk":
-        command = list(np.append(dk, default_app))
-        src.append("/etc/skel/.config/dk")
-        src.append("/etc/skel/.config/powermenu")
-        twm = True
-    elif desktop == "dusk":
-        command = list(np.append(dusk, default_app))
-        src.append("/etc/skel/.config/arco-dusk")
-        src.append("/etc/skel/.config/powermenu")
-        twm = True
-    elif desktop == "dwm":
-        command = list(np.append(dwm, default_app))
-        src.append("/etc/skel/.config/arco-dwm")
-        src.append("/etc/skel/.config/powermenu")
-        twm = True
-    elif desktop == "enlightenment":
-        command = enlightenment
-    elif desktop == "fvwm3":
-        command = list(np.append(fvwm3, default_app))
-        src.append("/etc/skel/.config/fvwm3")
-        src.append("/etc/skel/.fvwm")
-        src.append("/etc/skel/.config/polybar")
-        twm = True
     elif desktop == "gnome":
         command = gnome
     elif desktop == "herbstluftwm":
@@ -1263,68 +402,19 @@ def install_desktop(self, desktop, state):
         src.append("/etc/skel/.config/polybar")
         src.append("/etc/skel/.config/powermenu")
         twm = True
-    elif desktop == "hyprland":
-        command = list(np.append(hyprland, default_app))
-        src.append("/etc/skel/.config/alacritty")
-        src.append("/etc/skel/.bin")
-        src.append("/etc/skel/.config/hypr")
-        src.append("/etc/skel/.cache/wal")
-        src.append("/etc/skel/.config/powermenu")
-        twm = True
     elif desktop == "i3":
         command = list(np.append(i3, default_app))
         src.append("/etc/skel/.config/i3")
         src.append("/etc/skel/.config/polybar")
         src.append("/etc/skel/.config/powermenu")
         twm = True
-    elif desktop == "icewm":
-        command = list(np.append(icewm, default_app))
-        src.append("/etc/skel/.config/icewm")
-        twm = True
-    elif desktop == "jwm":
-        command = list(np.append(jwm, default_app))
-        src.append("/etc/skel/.config/jwm")
-        src.append("/etc/skel/.jwmrc")
-        twm = True
     elif desktop == "leftwm":
         command = list(np.append(leftwm, default_app))
         src.append("/etc/skel/.config/leftwm")
         src.append("/etc/skel/.config/powermenu")
         twm = True
-    elif desktop == "lxqt":
-        command = list(np.append(lxqt, default_app))
-        src.append("/etc/skel/.config/lxqt")
-        src.append("/etc/skel/.config/openbox")
-        src.append("/etc/skel/.config/pcmanfm-qt")
-        src.append("/etc/skel/.config/qterminal.org")
-        src.append("/etc/skel/.local/share/filemanager/actions/")
-        twm = True
     elif desktop == "mate":
         command = mate
-    elif desktop == "nimdow":
-        command = list(np.append(nimdow, default_app))
-        src.append("/etc/skel/.config/nimdow")
-        src.append("/etc/skel/.config/powermenu")
-        twm = True
-    elif desktop == "niri":
-        command = list(np.append(niri, default_app))
-        src.append("/etc/skel/.config/alacritty")
-        src.append("/etc/skel/.bin")
-        src.append("/etc/skel/.config/powermenu")
-        src.append("/etc/skel/.config/niri")
-        src.append("/etc/skel/.cache/wal")
-        twm = True
-    elif desktop == "pantheon":
-        command = pantheon
-    elif desktop == "openbox":
-        command = list(np.append(openbox, default_app))
-        src.append("/etc/skel/.config/openbox")
-        src.append("/etc/skel/.config/obmenu-generator")
-        src.append("/etc/skel/.config/tint2")
-        src.append("/etc/skel/.config/nitrogen")
-        src.append("/etc/skel/.config/picom.conf")
-        src.append("/etc/skel/.config/powermenu")
-        twm = True
     elif desktop == "plasma":
         check_package_and_remove(self, "qt5ct")
         command = plasma
@@ -1336,46 +426,8 @@ def install_desktop(self, desktop, state):
         src.append("/etc/skel/.config/qtile")
         src.append("/etc/skel/.config/powermenu")
         twm = True
-    elif desktop == "spectrwm":
-        command = list(np.append(spectrwm, default_app))
-        src.append("/etc/skel/.config/spectrwm")
-        src.append("/etc/skel/.spectrwm.conf")
-        src.append("/etc/skel/.config/polybar")
-        twm = True
-    elif desktop == "ukui":
-        command = list(np.append(ukui, default_app))
-        src.append("/etc/skel/.config/")
-        twm = True
-    elif desktop == "wayfire":
-        command = list(np.append(wayfire, default_app))
-        src.append("/etc/skel/.bin")
-        src.append("/etc/skel/.config/alacritty")
-        src.append("/etc/skel/.config/wayfire")
-        src.append("/etc/skel/.config/wayfire.ini")
-        src.append("/etc/skel/.config/wayfire-azerty.ini")
-        src.append("/etc/skel/.config/wf-shell.ini")
-        src.append("/etc/skel/.cache/wal")
-        src.append("/etc/skel/.config/powermenu")
-        twm = True
-    elif desktop == "wmderland":
-        command = list(np.append(wmderland, default_app))
-        src.append("/etc/skel/.config/wmderland")
-        src.append("/etc/skel/.config/polybar")
-        src.append("/etc/skel/.config/powermenu")
-        twm = True
-    elif desktop == "worm":
-        command = list(np.append(worm, default_app))
-        src.append("/etc/skel/.config/worm")
-        src.append("/etc/skel/.config/polybar")
-        twm = True
     elif desktop == "xfce":
         command = list(np.append(xfce, default_app))
-    elif desktop == "xmonad":
-        command = list(np.append(xmonad, default_app))
-        src.append("/etc/skel/.xmonad")
-        src.append("/etc/skel/.config/polybar")
-        src.append("/etc/skel/.config/powermenu")
-        twm = True
 
     GLib.idle_add(self.desktopr_prog.set_fraction, 0.2)
 
