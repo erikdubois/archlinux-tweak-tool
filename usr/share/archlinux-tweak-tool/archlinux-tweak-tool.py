@@ -807,7 +807,7 @@ class Main(Gtk.Window):
 
         # ====================DESKTOP INSTALL REINSTALL===================
 
-        if not fn.path.isfile(fn.arcolinux_mirrorlist):
+        if not fn.check_content("arcolinux", fn.pacman):
             self.button_install.set_sensitive(False)
             self.button_reinstall.set_sensitive(False)
 
