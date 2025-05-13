@@ -807,7 +807,7 @@ class Main(Gtk.Window):
 
         # ====================DESKTOP INSTALL REINSTALL===================
 
-        if not fn.check_content("arcolinux", fn.pacman):
+        if not fn.check_content("nemesis", fn.pacman):
             self.button_install.set_sensitive(False)
             self.button_reinstall.set_sensitive(False)
 
@@ -1256,8 +1256,8 @@ class Main(Gtk.Window):
                 fn.install_pace(self)
                 call("pace", shell=True)
             else:
-                print("First activate the ArcoLinux repos")
-                fn.show_in_app_notification(self, "First activate the ArcoLinux repos")
+                print("First activate the nemesis repo")
+                fn.show_in_app_notification(self, "First activate the nemesis repo")
         else:
             print("Install ArcoLinux mirrors and keys")
             fn.show_in_app_notification(self, "Install ArcoLinux mirrors and keys")
@@ -2542,10 +2542,10 @@ class Main(Gtk.Window):
             else:
                 self.firstrun = False
         else:
-            print("First activate the ArcoLinux repos")
+            print("First activate the nemesis repo")
             self.hbswich.set_active(False)
             GLib.idle_add(
-                fn.show_in_app_notification, self, "First activate the ArcoLinux repos"
+                fn.show_in_app_notification, self, "First activate the nemesis repo"
             )
 
     def set_ublock_firefox(self, widget, state):
@@ -3732,8 +3732,8 @@ class Main(Gtk.Window):
             if fn.check_arco_repos_active() is True:
                 fn.install_arco_thunar_plugin(self, widget)
             else:
-                print("First activate the ArcoLinux repos")
-                fn.show_in_app_notification(self, "First activate the ArcoLinux repos")
+                print("First activate the nemesis repo")
+                fn.show_in_app_notification(self, "First activate the nemesis repo")
         else:
             print("Install the ArcoLinux keys and mirrors")
             fn.show_in_app_notification(self, "Install the ArcoLinux keys and mirrors")
@@ -3743,8 +3743,8 @@ class Main(Gtk.Window):
             if fn.check_arco_repos_active() is True:
                 fn.install_arco_caja_plugin(self, widget)
             else:
-                print("First activate the ArcoLinux repos")
-                fn.show_in_app_notification(self, "First activate the ArcoLinux repos")
+                print("First activate the nemesis repo")
+                fn.show_in_app_notification(self, "First activate the nemesis repo")
         else:
             print("Install the ArcoLinux keys and mirrors")
             fn.show_in_app_notification(self, "Install the ArcoLinux keys and mirrors")
@@ -3754,8 +3754,8 @@ class Main(Gtk.Window):
             if fn.check_arco_repos_active() is True:
                 fn.install_arco_nemo_plugin(self, widget)
             else:
-                print("First activate the ArcoLinux repos")
-                fn.show_in_app_notification(self, "First activate the ArcoLinux repos")
+                print("First activate the nemesis repo")
+                fn.show_in_app_notification(self, "First activate the nemesis repo")
         else:
             print("Install the ArcoLinux keys and mirrors")
             fn.show_in_app_notification(self, "Install the ArcoLinux keys and mirrors")
@@ -4243,8 +4243,8 @@ class Main(Gtk.Window):
                 fn.permissions(fn.home + "/.config/alacritty")
                 print("Alacritty config saved")
         else:
-            print("First activate the ArcoLinux repos")
-            fn.show_in_app_notification(self, "First activate the ArcoLinux repos")
+            print("First activate the nemesis repo")
+            fn.show_in_app_notification(self, "First activate the nemesis repo")
 
     def on_clicked_remove_alacritty_themes(self, widget):
         fn.remove_package(self, "alacritty")
@@ -4268,8 +4268,8 @@ class Main(Gtk.Window):
             print("Xfce4 themes installed")
             fn.show_in_app_notification(self, "Xfce4 themes installed")
         else:
-            print("First activate the ArcoLinux repos")
-            fn.show_in_app_notification(self, "First activate the ArcoLinux repos")
+            print("First activate the nemesis repo")
+            fn.show_in_app_notification(self, "First activate the nemesis repo")
 
     def on_clicked_remove_xfce4_themes(self, widget):
         fn.remove_package(self, "xfce4-terminal-base16-colors-git")
@@ -4321,8 +4321,8 @@ class Main(Gtk.Window):
             print("Termite  themes installed")
             fn.show_in_app_notification(self, "Termite themes installed")
         else:
-            print("First activate the ArcoLinux repos")
-            fn.show_in_app_notification(self, "First activate the ArcoLinux repos")
+            print("First activate the nemesis repo")
+            fn.show_in_app_notification(self, "First activate the nemesis repo")
 
     def on_clicked_remove_termite_themes(self, widget):
         fn.remove_package(self, "arcolinux-termite-themes-git")

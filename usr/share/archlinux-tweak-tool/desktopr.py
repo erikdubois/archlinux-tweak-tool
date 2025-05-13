@@ -89,7 +89,6 @@ if fn.distr:
         "polybar",
         "polkit-gnome",
         "rofi",
-        "sutils-git",
         "sxhkd",
         "thunar",
         "thunar-archive-plugin",
