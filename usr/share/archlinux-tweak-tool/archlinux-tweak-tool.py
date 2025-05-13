@@ -4191,7 +4191,7 @@ class Main(Gtk.Window):
         fn.install_package(self, "alacritty")
 
     def on_clicked_install_alacritty_themes(self, widget):
-        if fn.check_nemesis_repos_active() is True:
+        if fn.check_edu_repos_active() is True:
             fn.install_package(self, "alacritty")
             fn.install_package(self, "ttf-hack")
             fn.install_arco_package(self, "alacritty-themes")
