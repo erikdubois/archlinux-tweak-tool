@@ -378,7 +378,7 @@ def gui(self, Gtk, vboxstack1, fn):
     vboxstack1.pack_start(hbox3, False, False, 0)
     vboxstack1.pack_start(hbox4, False, False, 0)
     vboxstack1.pack_start(hbox5, False, False, 0)
-    vboxstack1.pack_start(frame3, False, False, 5)
+    #vboxstack1.pack_start(frame3, False, False, 5)
 
     # =================TESTING REPO========================
 
