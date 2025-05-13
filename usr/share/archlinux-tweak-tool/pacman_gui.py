@@ -222,19 +222,15 @@ def gui(self, Gtk, vboxstack1, fn):
     # ========================================================
     #               ARCO REPOS PACKING
     # ========================================================
-    if not fn.check_package_installed("arcolinux-keyring"):
+    if not fn.check_content("arcolinux", fn.pacman):
         hboxstack7.pack_start(label5, False, True, 10)
         hboxstack7.pack_end(self.arcolinux_button, False, True, 10)
 
-    if fn.check_package_installed("arcolinux-keyring"):
-        #hboxstack18.pack_start(label1, False, True, 10)
-        #hboxstack18.pack_end(self.atestrepo_button, False, False, 10)
+    if fn.check_content("arcolinux", fn.pacman):
         hboxstack7.pack_start(label5, False, True, 10)
         hboxstack7.pack_end(self.arepo_button, False, False, 10)
         hboxstack8.pack_start(label6, False, True, 10)
         hboxstack8.pack_end(self.a3prepo_button, False, False, 10)
-        #hboxstack9.pack_start(label7, False, True, 10)
-        #hboxstack9.pack_end(self.axlrepo_button, False, False, 10)
 
     vboxstack2 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
     vboxstack2.pack_start(hboxstack1, False, False, 10)

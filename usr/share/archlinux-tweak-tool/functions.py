@@ -1941,26 +1941,27 @@ def install_endeavouros(self):
 
 
 def install_arcolinux(self):
-    """add the ArcoLinux repos in /etc/pacman.conf if none are present"""
+    """Add the ArcoLinux repos to /etc/pacman.conf if none are present."""
     if not check_content("arcolinux", pacman):
 
         print("[INFO] : Adding ArcoLinux repos")
         try:
             with open(pacman, "r", encoding="utf-8") as f:
                 lines = f.readlines()
-                f.close()
         except Exception as error:
             print(error)
+            return  # Exit early if read fails
 
+        # Repos to be added at the end
         text = (
             "\n\n"
             + arepo
             + "\n\n"
             + a3drepo
+            + "\n"
         )
 
-        pos = get_position(lines, "#[testing]")
-        lines.insert(pos - 2, text)
+        lines.append(text)
 
         try:
             with open(pacman, "w", encoding="utf-8") as f:

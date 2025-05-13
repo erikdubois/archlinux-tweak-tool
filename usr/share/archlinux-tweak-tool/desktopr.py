@@ -97,7 +97,6 @@ if fn.distr:
         "ttf-hack",
         "volumeicon",
         "xfce4-terminal",
-        "xtitle-git",
     ]
     budgie = [
         "budgie-desktop",
@@ -190,12 +189,10 @@ if fn.distr:
         "leftwm-git",
         "leftwm-theme-git",
         "lxappearance",
-        "nerd-fonts-source-code-pro",
         "picom-git",
         "polybar",
         "polkit-gnome",
         "rofi",
-        "rofi-theme-fonts",
         "sxhkd",
         "thunar",
         "thunar-archive-plugin",

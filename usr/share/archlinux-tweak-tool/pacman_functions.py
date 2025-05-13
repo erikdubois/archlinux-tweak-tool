@@ -98,7 +98,7 @@ def pacman_on(repo, lines, i, line):
         lines[i] = line.replace("#", "")
         if (i + 1) < len(lines):
             lines[i + 1] = lines[i + 1].replace("#", "")
-        if (i + 2) < len(lines) and "Include" in lines[i + 2]:
+        if (i + 2) < len(lines) and "Server" in lines[i + 2]:
             lines[i + 2] = lines[i + 2].replace("#", "")
 
 
@@ -108,7 +108,7 @@ def mirror_on(mirror, lines, i, line):
         lines[i] = line.replace("#", "")
         if (i + 1) < len(lines):
             lines[i + 1] = lines[i + 1].replace("#", "")
-        if (i + 2) < len(lines) and "Include" in lines[i + 2]:
+        if (i + 2) < len(lines) and "Server" in lines[i + 2]:
             lines[i + 2] = lines[i + 2].replace("#", "")
 
 
@@ -120,7 +120,7 @@ def pacman_off(repo, lines, i, line):
         if (i + 1) < len(lines):
             if "#" not in lines[i + 1]:
                 lines[i + 1] = lines[i + 1].replace(lines[i + 1], "#" + lines[i + 1])
-        if (i + 2) < len(lines) and "Include" in lines[i + 2]:
+        if (i + 2) < len(lines) and "Server" in lines[i + 2]:
             if "#" not in lines[i + 2]:
                 lines[i + 2] = lines[i + 2].replace(lines[i + 2], "#" + lines[i + 2])
 
