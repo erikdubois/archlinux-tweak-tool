@@ -807,17 +807,9 @@ class Main(Gtk.Window):
 
         # ====================DESKTOP INSTALL REINSTALL===================
 
-        if not fn.check_content("nemesis", fn.pacman):
+        if not fn.check_edu_repos_active():
             self.button_install.set_sensitive(False)
             self.button_reinstall.set_sensitive(False)
-
-        if fn.path.isfile(fn.arcolinux_mirrorlist):
-            if fn.check_arco_repos_active() is True:
-                self.button_install.set_sensitive(True)
-                self.button_reinstall.set_sensitive(True)
-            else:
-                self.button_install.set_sensitive(False)
-                self.button_reinstall.set_sensitive(False)
 
         # =====================================================
         #                        GRUB
@@ -1246,29 +1238,6 @@ class Main(Gtk.Window):
     # ================================================================================
     # ================================================================================
 
-    # ====================================================================
-    #                       ARCOLINUX MIRRORLIST
-    # ====================================================================
-
-    def on_click_launch_pace(self, widget):
-        if fn.path.isfile(fn.arcolinux_mirrorlist):
-            if fn.check_arco_repos_active() is True:
-                fn.install_pace(self)
-                call("pace", shell=True)
-            else:
-                print("First activate the nemesis repo")
-                fn.show_in_app_notification(self, "First activate the nemesis repo")
-        else:
-            print("Install ArcoLinux mirrors and keys")
-            fn.show_in_app_notification(self, "Install ArcoLinux mirrors and keys")
-
-    def on_click_reset_arcolinux_mirrorlist(self, widget):
-        if fn.path.isfile(fn.arcolinux_mirrorlist_original):
-            fn.shutil.copy(fn.arcolinux_mirrorlist_original, fn.arcolinux_mirrorlist)
-            fn.show_in_app_notification(
-                self, "Original ArcoLinux mirrorlist is applied"
-            )
-        fn.restart_program()
 
     # ====================================================================
     #                       ATT
@@ -2529,7 +2498,7 @@ class Main(Gtk.Window):
     # ====================================================================
 
     def set_hblock(self, widget, state):
-        if fn.check_arco_repos_active() is True:
+        if fn.check_edu_repos_active() is True:
             if self.firstrun is not True:
                 t = fn.threading.Thread(
                     target=fn.set_hblock, args=(self, widget, widget.get_active())
@@ -4222,7 +4191,7 @@ class Main(Gtk.Window):
         fn.install_package(self, "alacritty")
 
     def on_clicked_install_alacritty_themes(self, widget):
-        if fn.check_arco_repos_active() is True:
+        if fn.check_nemesis_repos_active() is True:
             fn.install_package(self, "alacritty")
             fn.install_package(self, "ttf-hack")
             fn.install_arco_package(self, "alacritty-themes")
@@ -4261,7 +4230,7 @@ class Main(Gtk.Window):
         fn.remove_package(self, "xfce4-terminal")
 
     def on_clicked_install_xfce4_themes(self, widget):
-        if fn.check_arco_repos_active() is True:
+        if fn.check_edu_repos_active() is True:
             fn.install_arco_package(self, "xfce4-terminal-base16-colors-git")
             fn.install_arco_package(self, "tempus-themes-xfce4-terminal-git")
             fn.install_arco_package(self, "prot16-xfce4-terminal")
@@ -4312,7 +4281,7 @@ class Main(Gtk.Window):
         terminals.get_themes(self.term_themes)
 
     def on_clicked_install_termite_themes(self, widget):
-        if fn.check_arco_repos_active() is True:
+        if fn.check_edu_repos_active() is True:
             fn.install_arco_package(self, "termite")
             fn.install_arco_package(self, "arcolinux-termite-themes-git")
             fn.copy_func("/etc/skel/.config/termite", fn.home + "/.config/", True)
