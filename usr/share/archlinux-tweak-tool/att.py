@@ -1265,7 +1265,7 @@ def set_att_checkboxes_extras_none(self):
 # install
 def install_att_extras(self):
     if self.att_candy_beauty.get_active():
-        fn.install_arco_package(self, "a-candy-beauty-icon-theme-git")
+        fn.install_arco_package(self, "neo-candy-icons-git")
     if self.edu_candy_beauty_arc.get_active():
         fn.install_edu_package(self, "edu-candy-beauty-arc-git")
     if self.edu_candy_beauty_arc_mint_grey.get_active():
@@ -1299,7 +1299,7 @@ def remove_att_extras(self):
     if self.edu_candy_beauty_tela.get_active():
         fn.remove_package(self, "edu-candy-beauty-tela-git")
     if self.att_candy_beauty.get_active():
-        fn.remove_package(self, "a-candy-beauty-icon-theme-git")
+        fn.remove_package(self, "neo-candy-icons-git")
 
 
 # find

@@ -12,7 +12,7 @@ import login
 import lxdm
 import fastfetch
 import sddm
-import design
+#import design
 import att
 import terminals
 
@@ -27,18 +27,18 @@ import att_gui
 import autostart_gui
 import desktopr_gui
 import fixes_gui
-import grub_gui
-import login_gui
+#import grub_gui
+#import login_gui
 import arcolinuxmirrors_gui
 import fastfetch_gui
 import pacman_gui
 import privacy_gui
 import terminals_gui
-import utilities_gui
+#import utilities_gui
 import services_gui
 import shell_gui
 import themer_gui
-import design_gui
+#import design_gui
 import user_gui
 import packages_gui
 
@@ -165,7 +165,7 @@ Then you will be able to set the mirrors of ArcoLinux"
     #                 DESIGN
     # ==========================================================
 
-    design_gui.gui(self, Gtk, vboxstack24, design, fn)
+    #design_gui.gui(self, Gtk, vboxstack24, design, fn)
 
     # # ==========================================================
     # #               FASTFETCH
@@ -276,7 +276,7 @@ themes</i> you can customize <b>fastfetch</b>"
 
     stack.add_titled(vboxstack13, "stack13", "Autostart")  # Autostart
 
-    stack.add_titled(vboxstack24, "stack24", "Design")  # Design
+    #stack.add_titled(vboxstack24, "stack24", "Design")  # Design
 
     stack.add_titled(vboxstack12, "stack12", "Desktop")  # Desktop installer
 

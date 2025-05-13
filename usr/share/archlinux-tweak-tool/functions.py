@@ -666,7 +666,7 @@ def install_local_package(self, package):
 
 
 def install_arco_package(self, package):
-    if check_arco_repos_active():
+    if check_edu_repos_active():
         command = "pacman -S " + package + " --noconfirm --needed"
         if check_package_installed(package):
             print(package + " is already installed - nothing to do")
@@ -691,11 +691,11 @@ def install_arco_package(self, package):
             except Exception as error:
                 print(error)
     else:
-        print("You need to activate the ArcoLinux repos")
+        print("You need to activate the Nemesis repo")
         print("Check the pacman tab of the ArchLinux Tweak Tool")
         print("and/or the content of /etc/pacman.conf")
         GLib.idle_add(
-            show_in_app_notification, self, "You need to activate the ArcoLinux repos"
+            show_in_app_notification, self, "You need to activate the Nemesis repo"
         )
 
 

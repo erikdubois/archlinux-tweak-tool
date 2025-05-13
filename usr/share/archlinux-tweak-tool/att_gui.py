@@ -46,7 +46,7 @@ def gui(self, Gtk, vboxstack25, att, fn):
     hbox10_label = Gtk.Label(xalign=0)
     hbox10_label.set_markup(
         'Select the packages you want to install or remove, then click the appropriate button.\n\
-Ensure that the <b>ArcoLinux repositories are enabled</b> — see the "Pacman" tab for details.'
+Ensure that the <b>Nemesis repository is enabled</b> — see the "Pacman" tab for details.'
     )
 
     hbox10.pack_start(hbox10_label, False, False, 10)
@@ -225,7 +225,7 @@ Ensure that the <b>ArcoLinux repositories are enabled</b> — see the "Pacman" t
     hbox20_label = Gtk.Label(xalign=0)
     hbox20_label.set_markup(
         'Select the packages you want to install or remove, then click the appropriate button.\n\
-Ensure that the <b>ArcoLinux repositories are enabled</b> — see the "Pacman" tab for details.'
+Ensure that the <b>Nemesis repository is enabled</b> — see the "Pacman" tab for details.'
     )
     hbox20.pack_start(hbox20_label, False, False, 10)
 
@@ -419,7 +419,7 @@ Ensure that the <b>ArcoLinux repositories are enabled</b> — see the "Pacman" t
     hbox30_label = Gtk.Label(xalign=0)
     hbox30_label.set_markup(
         'Select the packages you want to install or remove, then click the appropriate button.\n\
-Ensure that the <b>ArcoLinux repositories are enabled</b> — see the "Pacman" tab for details.'
+Ensure that the <b>Nemesis repository is enabled</b> — see the "Pacman" tab for details.'
     )
     hbox30.pack_start(hbox30_label, False, False, 10)
 
@@ -494,13 +494,13 @@ Ensure that the <b>ArcoLinux repositories are enabled</b> — see the "Pacman" t
     hbox40_label = Gtk.Label(xalign=0)
     hbox40_label.set_markup(
         'Select the packages you want to install or remove, then click the appropriate button.\n\
-Ensure that the <b>ArcoLinux and Nemesis repositories are enabled</b> — see the "Pacman" tab for details.'
+Ensure that the <b>Nemesis repository is enabled</b> — see the "Pacman" tab for details.'
     )
     hbox40.pack_start(hbox40_label, False, False, 10)
 
     hbox41 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
 
-    self.att_candy_beauty = Gtk.CheckButton(label="A Candy Beauty Icon Theme")
+    self.att_candy_beauty = Gtk.CheckButton(label="Neo Candy Icons")
     self.edu_candy_beauty_arc = Gtk.CheckButton(label="Edu Candy Beauty Arc")
     self.edu_candy_beauty_arc_mint_grey = Gtk.CheckButton(
         label="Edu Candy Beauty Arc Mint Grey"
