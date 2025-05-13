@@ -1808,31 +1808,6 @@ def get_commands(conflist):
     commands_index = get_position(conflist, commands[0])
     return int(commands_index)
 
-
-# =====================================================
-#               PACE INSTALLATION
-# =====================================================
-
-
-def install_pace(self):
-    install = "pacman -S pace --noconfirm --needed"
-
-    if path.exists("/usr/bin/pace"):
-        # print("Pace is already installed")
-        pass
-    else:
-        try:
-            subprocess.call(
-                install.split(" "),
-                shell=False,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-            )
-            print("Pace is now installed")
-        except Exception as error:
-            print(error)
-
-
 # =====================================================
 #               PACMAN EXTRA KEYS AND MIRRORS
 # =====================================================
