@@ -704,13 +704,6 @@ class Main(Gtk.Window):
         #               READING AND SETTING
         # =====================================================
 
-        # ========================ARCO REPO=============================
-
-        arco_testing = pmf.check_repo("[arcolinux_repo_testing]")
-        arco_base = pmf.check_repo("[arcolinux_repo]")
-        arco_3p = pmf.check_repo("[arcolinux_repo_3party]")
-        arco_xl = pmf.check_repo("[arcolinux_repo_xlarge]")
-
         # ========================ARCH REPO=============================
 
         arch_testing = pmf.check_repo("[core-testing]")
@@ -722,60 +715,8 @@ class Main(Gtk.Window):
 
         # ========================OTHER REPO=============================
 
-        reborn_repo = pmf.check_repo("[Reborn-OS]")
-        garuda_repo = pmf.check_repo("[garuda]")
         chaotics_repo = pmf.check_repo("[chaotic-aur]")
-        endeavouros_repo = pmf.check_repo("[endeavouros]")
         nemesis_repo = pmf.check_repo("[nemesis_repo]")
-        # xero_repo = pmf.check_repo("[xerolinux_repo]")
-        # xero_xl_repo = pmf.check_repo("[xerolinux_repo_xl]")
-        # xero_nv_repo = pmf.check_repo("[xerolinux_nvidia_repo]")
-
-        # ========================ARCO MIRROR=============================
-
-        if fn.path.isfile(fn.arcolinux_mirrorlist):
-            arco_mirror_seed = pmf.check_mirror(
-                "Server = https://ant.seedhost.eu/arcolinux/$repo/$arch"
-            )
-            arco_mirror_gitlab = pmf.check_mirror(
-                "Server = https://gitlab.com/arcolinux/$repo/-/raw/main/$arch"
-            )
-            arco_mirror_belnet = pmf.check_mirror(
-                "Server = https://ftp.belnet.be/arcolinux/$repo/$arch"
-            )
-            arco_mirror_accum = pmf.check_mirror(
-                "Server = https://mirror.accum.se/mirror/arcolinux.info/$repo/$arch"
-            )
-            arco_mirror_funami = pmf.check_mirror(
-                "Server = https://mirror.funami.tech/arcolinux/$repo/$arch"
-            )
-            arco_mirror_jingk = pmf.check_mirror(
-                "Server = https://mirror.jingk.ai/arcolinux/$repo/$arch"
-            )
-            arco_mirror_aarnet = pmf.check_mirror(
-                "Server = https://mirror.aarnet.edu.au/pub/arcolinux/$repo/$arch"
-            )
-            # arco_mirror_github = pmf.check_mirror(
-            #     "Server = https://arcolinux.github.io/$repo/$arch")
-
-        # ========================ARCO MIRROR SET TOGGLE=====================
-
-        if fn.path.isfile(fn.arcolinux_mirrorlist):
-            self.aseed_button.set_active(arco_mirror_seed)
-            self.agitlab_button.set_active(arco_mirror_gitlab)
-            self.abelnet_button.set_active(arco_mirror_belnet)
-            self.afunami_button.set_active(arco_mirror_funami)
-            self.ajingk_button.set_active(arco_mirror_jingk)
-            self.aaccum_button.set_active(arco_mirror_accum)
-            self.aarnet_button.set_active(arco_mirror_aarnet)
-            # self.agithub_button.set_active(arco_mirror_github)
-
-        # ========================ARCO REPO SET TOGGLE=====================
-
-        self.atestrepo_button.set_active(arco_testing)
-        self.arepo_button.set_active(arco_base)
-        self.a3prepo_button.set_active(arco_3p)
-        self.axlrepo_button.set_active(arco_xl)
 
         # ========================ARCH LINUX REPO SET TOGGLE==================
 
@@ -788,22 +729,10 @@ class Main(Gtk.Window):
 
         # ========================OTHER REPO SET TOGGLE==================
 
-        self.reborn_switch.set_active(reborn_repo)
-        self.opened = False
-        self.garuda_switch.set_active(garuda_repo)
-        self.opened = False
         self.chaotics_switch.set_active(chaotics_repo)
-        self.opened = False
-        self.endeavouros_switch.set_active(endeavouros_repo)
         self.opened = False
         self.nemesis_switch.set_active(nemesis_repo)
         self.opened = False
-        # self.xerolinux_switch.set_active(xero_repo)
-        # self.opened = False
-        # self.xerolinux_xl_switch.set_active(xero_xl_repo)
-        # self.opened = False
-        # self.xerolinux_nv_switch.set_active(xero_nv_repo)
-        # self.opened = False
 
         # ====================DESKTOP INSTALL REINSTALL===================
 
