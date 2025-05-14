@@ -58,8 +58,8 @@ class Main(Gtk.Window):
             "---------------------------------------------------------------------------"
         )
         print("Wayland desktops are now supported e.g. Wayfire and Hyprland")
-        print("If you have errors, report it on the discord channel of ArcoLinux")
-        print("https://discord.gg/stBhS4taje")
+        print("If you have errors, report it on the github")
+        print("https://github.com/erikdubois/archlinux-tweak-tool")
         print(
             "---------------------------------------------------------------------------"
         )
@@ -103,7 +103,7 @@ class Main(Gtk.Window):
         print("Run fix-sddm-conf")
         print("Run fix-lightdm-conf")
         print("Run fix-lxdm-conf")
-        print("You can receive ATT support on https://discord.gg/stBhS4taje")
+        print("You can receive ATT support on https://github.com/erikdubois/archlinux-tweak-tool")
         print(
             "---------------------------------------------------------------------------"
         )
