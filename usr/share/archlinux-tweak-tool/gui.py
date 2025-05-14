@@ -120,28 +120,28 @@ def gui(self, Gtk, Gdk, GdkPixbuf, base_dir, os, Pango):
     #                 ARCOLINUX MIRRORLIST
     # ==========================================================
 
-    if fn.file_check("/etc/pacman.d/arcolinux-mirrorlist"):
-        arcolinuxmirrors_gui.gui(self, Gtk, vboxstack16)
-    else:
-        hbox31 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-        lbl1 = Gtk.Label(xalign=0)
-        lbl1.set_text("ArcoLinux Mirrorlist")
-        lbl1.set_name("title")
-        hbox31.pack_start(lbl1, False, False, 0)
+#     if fn.file_check("/etc/pacman.d/arcolinux-mirrorlist"):
+#         arcolinuxmirrors_gui.gui(self, Gtk, vboxstack16)
+#     else:
+#         hbox31 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+#         lbl1 = Gtk.Label(xalign=0)
+#         lbl1.set_text("ArcoLinux Mirrorlist")
+#         lbl1.set_name("title")
+#         hbox31.pack_start(lbl1, False, False, 0)
 
-        hbox41 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-        hseparator = Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL)
-        hbox41.pack_start(hseparator, True, True, 0)
+#         hbox41 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+#         hseparator = Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL)
+#         hbox41.pack_start(hseparator, True, True, 0)
 
-        lbl2 = Gtk.Label()
-        lbl2.set_markup(
-            "First install the ArcoLinux Mirrors and ArcoLinux keys\n\
-Then you will be able to set the mirrors of ArcoLinux"
-        )
+#         lbl2 = Gtk.Label()
+#         lbl2.set_markup(
+#             "First install the ArcoLinux Mirrors and ArcoLinux keys\n\
+# Then you will be able to set the mirrors of ArcoLinux"
+#         )
 
-        vboxstack16.pack_start(hbox31, False, False, 0)
-        vboxstack16.pack_start(hbox41, False, False, 0)
-        vboxstack16.pack_start(lbl2, True, False, 0)
+#         vboxstack16.pack_start(hbox31, False, False, 0)
+#         vboxstack16.pack_start(hbox41, False, False, 0)
+#         vboxstack16.pack_start(lbl2, True, False, 0)
 
     # ==========================================================
     #                 ATT
