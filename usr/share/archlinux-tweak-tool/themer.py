@@ -202,7 +202,7 @@ def set_awesome_theme(lines, val):
 def get_qtile_themes(combo, lines):
     """get qtile themes"""
     combo.get_model().clear()
-    if fn.check_package_installed("arcolinux-qtile-git"):
+    if fn.check_package_installed("edu-qtile-git"):
         try:
             menu = [
                 x
@@ -228,7 +228,7 @@ def get_qtile_themes(combo, lines):
 
 def set_qtile_themes(lines, theme):
     """set qtile themes"""
-    if fn.check_package_installed("arcolinux-qtile-git"):
+    if fn.check_package_installed("edu-qtile-git"):
         try:
             pos1 = fn.get_position(lines, "# COLORS FOR THE BAR")
             pos2 = fn.get_position(lines, "colors = init_colors()")
@@ -260,11 +260,11 @@ def set_qtile_themes(lines, theme):
 def get_leftwm_themes(combo, lines):
     """get leftwm themes"""
     combo.get_model().clear()
-    if fn.check_package_installed("arcolinux-qtile-git"):
+    if fn.check_package_installed("edu-leftwm-git"):
         try:
             menu = [
                 x
-                for x in fn.os.listdir(fn.home + "/.config/qtile/themes/")
+                for x in fn.os.listdir(fn.home + "/.config/leftwm/themes/")
                 if ".theme" in x
             ]
 
