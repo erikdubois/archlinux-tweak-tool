@@ -501,14 +501,14 @@ Ensure that the <b>Nemesis repository is enabled</b> — see the "Pacman" tab fo
     hbox41 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
 
     self.att_candy_beauty = Gtk.CheckButton(label="Neo Candy Icons")
-    self.edu_candy_beauty_arc = Gtk.CheckButton(label="Edu Candy Beauty Arc")
+    self.edu_candy_beauty_arc = Gtk.CheckButton(label="Edu Neo Candy Arc")
     self.edu_candy_beauty_arc_mint_grey = Gtk.CheckButton(
-        label="Edu Candy Beauty Arc Mint Grey"
+        label="Edu Neo Candy Arc Mint Grey"
     )
     self.edu_candy_beauty_arc_mint_red = Gtk.CheckButton(
-        label="Edu Candy Beauty Arc Mint Red"
+        label="Edu Neo Candy Arc Mint Red"
     )
-    self.edu_candy_beauty_tela = Gtk.CheckButton(label="Edu Candy Beauty Tela")
+    self.edu_candy_beauty_tela = Gtk.CheckButton(label="Edu Neo Candy Tela")
     self.edu_papirus_dark_tela = Gtk.CheckButton(label="Edu Papirus Dark Tela")
     self.edu_papirus_dark_tela_grey = Gtk.CheckButton(
         label="Edu Papirus Dark Tela Grey "

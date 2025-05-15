@@ -1267,13 +1267,13 @@ def install_att_extras(self):
     if self.att_candy_beauty.get_active():
         fn.install_arco_package(self, "neo-candy-icons-git")
     if self.edu_candy_beauty_arc.get_active():
-        fn.install_edu_package(self, "edu-candy-beauty-arc-git")
+        fn.install_edu_package(self, "edu-neo-candy-arc-git")
     if self.edu_candy_beauty_arc_mint_grey.get_active():
-        fn.install_edu_package(self, "edu-candy-beauty-arc-mint-grey-git")
+        fn.install_edu_package(self, "edu-neo-candy-arc-mint-grey-git")
     if self.edu_candy_beauty_arc_mint_red.get_active():
-        fn.install_edu_package(self, "edu-candy-beauty-arc-mint-red-git")
+        fn.install_edu_package(self, "edu-neo-candy-arc-mint-red-git")
     if self.edu_candy_beauty_tela.get_active():
-        fn.install_edu_package(self, "edu-candy-beauty-tela-git")
+        fn.install_edu_package(self, "edu-neo-candy-tela-git")
     if self.edu_papirus_dark_tela.get_active():
         fn.install_edu_package(self, "edu-papirus-dark-tela-git")
     if self.edu_papirus_dark_tela_grey.get_active():
@@ -1285,11 +1285,11 @@ def install_att_extras(self):
 # remove
 def remove_att_extras(self):
     if self.edu_candy_beauty_arc.get_active():
-        fn.remove_package(self, "edu-candy-beauty-arc-git")
+        fn.remove_package(self, "edu-neo-candy-arc-git")
     if self.edu_candy_beauty_arc_mint_grey.get_active():
-        fn.remove_package(self, "edu-candy-beauty-arc-mint-grey-git")
+        fn.remove_package(self, "edu-neo-candy-arc-mint-grey-git")
     if self.edu_candy_beauty_arc_mint_red.get_active():
-        fn.remove_package(self, "edu-candy-beauty-arc-mint-red-git")
+        fn.remove_package(self, "edu-neo-candy-arc-mint-red-git")
     if self.edu_papirus_dark_tela.get_active():
         fn.remove_package(self, "edu-papirus-dark-tela-git")
     if self.edu_papirus_dark_tela_grey.get_active():
@@ -1297,7 +1297,7 @@ def remove_att_extras(self):
     if self.edu_vimix_dark_tela.get_active():
         fn.remove_package(self, "edu-vimix-dark-tela-git")
     if self.edu_candy_beauty_tela.get_active():
-        fn.remove_package(self, "edu-candy-beauty-tela-git")
+        fn.remove_package(self, "edu-neo-candy-tela-git")
     if self.att_candy_beauty.get_active():
         fn.remove_package(self, "neo-candy-icons-git")
 
@@ -1313,15 +1313,15 @@ def find_att_extras(self):
     self.edu_papirus_dark_tela_grey.set_active(False)
     self.edu_vimix_dark_tela.set_active(False)
 
-    if fn.check_package_installed("a-candy-beauty-icon-theme-git"):
+    if fn.check_package_installed("neo-candy-icons-git"):
         self.att_candy_beauty.set_active(True)
-    if fn.check_package_installed("edu-candy-beauty-arc-git"):
+    if fn.check_package_installed("edu-neo-candy-arc-git"):
         self.edu_candy_beauty_arc.set_active(True)
-    if fn.check_package_installed("edu-candy-beauty-arc-mint-grey-git"):
+    if fn.check_package_installed("edu-neo-candy-arc-mint-grey-git"):
         self.edu_candy_beauty_arc_mint_grey.set_active(True)
-    if fn.check_package_installed("edu-candy-beauty-arc-mint-red-git"):
+    if fn.check_package_installed("edu-neo-candy-arc-mint-red-git"):
         self.edu_candy_beauty_arc_mint_red.set_active(True)
-    if fn.check_package_installed("edu-candy-beauty-tela-git"):
+    if fn.check_package_installed("edu-neo-candy-tela-git"):
         self.edu_candy_beauty_tela.set_active(True)
     if fn.check_package_installed("edu-papirus-dark-tela-git"):
         self.edu_papirus_dark_tela.set_active(True)
