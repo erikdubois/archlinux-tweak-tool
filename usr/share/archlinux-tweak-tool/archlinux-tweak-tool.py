@@ -2005,7 +2005,7 @@ class Main(Gtk.Window):
         self.btn_run_reflector.set_sensitive(True)
 
     def on_click_install_arch_mirrors2(self, widget):
-        fn.install_arco_package(self, "rate-mirrors-bin")
+        fn.install_arco_package(self, "rate-mirrors")
         self.btn_run_rate_mirrors.set_sensitive(True)
 
     def on_click_apply_global_cursor(self, widget):
@@ -3849,7 +3849,7 @@ class Main(Gtk.Window):
         if self.hw_probe.get_active():
             fn.install_arco_package(self, "hw-probe")
         if self.rate_mirrors.get_active():
-            fn.install_arco_package(self, "rate-mirrors-bin")
+            fn.install_arco_package(self, "rate-mirrors")
         if self.most.get_active():
             fn.install_package(self, "most")
         print("Software has been installed depending on the repos")
@@ -3870,7 +3870,7 @@ class Main(Gtk.Window):
             self.downgrade.set_active(False)
         if fn.check_package_installed("hw-probe") is False:
             self.hw_probe.set_active(False)
-        if fn.check_package_installed("rate-mirrors-bin") is False:
+        if fn.check_package_installed("rate-mirrors") is False:
             self.rate_mirrors.set_active(False)
         if fn.check_package_installed("most") is False:
             self.most.set_active(False)
