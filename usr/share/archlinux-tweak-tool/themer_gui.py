@@ -19,15 +19,15 @@ def gui(self, Gtk, GdkPixbuf, vboxstack10, themer, fn, base_dir):
     hbox6.pack_start(lbl1, False, False, 0)
 
     if fn.os.path.isfile(fn.i3wm_config) and fn.check_package_installed(
-        "arcolinux-i3wm-git"
+        "edu-i3-git"
     ):
         i3_list = themer.get_list(fn.i3wm_config)
     if fn.os.path.isfile(fn.awesome_config) and fn.check_package_installed(
-        "arcolinux-awesome-git"
+        "edu-awesome-git"
     ):
         awesome_list = themer.get_list(fn.awesome_config)
     if fn.os.path.isfile(fn.qtile_config_theme) and fn.check_package_installed(
-        "arcolinux-qtile-git"
+        "edu-qtile-git"
     ):
         qtile_list = themer.get_list(fn.qtile_config)
 
