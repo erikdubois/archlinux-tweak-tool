@@ -586,10 +586,10 @@ Ensure that the <b>Nemesis repository is enabled</b> — see the "Pacman" tab fo
     #                       PACK TO STACK
     # ==================================================================
 
+    stack.add_titled(vboxstack4, "stack4", "Icons - Neo candy")
     stack.add_titled(vboxstack2, "stack2", "Icons - Sardi")
     stack.add_titled(vboxstack3, "stack3", "Icons - Surfn")
     stack.add_titled(vboxstack1, "stack1", "Themes")
-    stack.add_titled(vboxstack4, "stack4", "Extras")
 
     vbox.pack_start(stack_switcher, False, False, 0)
     vbox.pack_start(stack, True, True, 0)
