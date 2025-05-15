@@ -14,7 +14,7 @@ import fastfetch
 import sddm
 #import design
 import att
-import terminals
+#import terminals
 
 # import template
 import themer
@@ -29,11 +29,11 @@ import desktopr_gui
 import fixes_gui
 #import grub_gui
 #import login_gui
-import arcolinuxmirrors_gui
+#import arcolinuxmirrors_gui
 import fastfetch_gui
 import pacman_gui
 import privacy_gui
-import terminals_gui
+#import terminals_gui
 #import utilities_gui
 import services_gui
 import shell_gui
@@ -244,7 +244,7 @@ themes</i> you can customize <b>fastfetch</b>"
     # #                 TERMINALS
     # # ==========================================================
 
-    terminals_gui.gui(self, Gtk, vboxstack7, terminals)
+    #terminals_gui.gui(self, Gtk, vboxstack7, terminals)
 
     # # ==========================================================
     # #               TERMINAL FUN
@@ -304,7 +304,7 @@ themes</i> you can customize <b>fastfetch</b>"
 
     # stack.add_titled(vboxstack21, "stack21", "Template")  # template
 
-    stack.add_titled(vboxstack7, "stack8", "Terminals")  # Terminals
+    #stack.add_titled(vboxstack7, "stack8", "Terminals")  # Terminals
 
     #stack.add_titled(vboxstack20, "stack20", "Terminal Fun")  # lolcat and others
 
