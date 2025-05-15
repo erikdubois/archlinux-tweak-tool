@@ -188,11 +188,11 @@ alias setlocales="sudo localectl set-x11-keymap be && sudo localectl set-locale 
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias rmpacmanlock="sudo rm /var/lib/pacman/db.lck"
 
-#arcolinux logout unlock
+#logout unlock
 alias rmlogoutlock="sudo rm /tmp/arcologout.lock"
 
 #which graphical card is working
-alias whichvga="/usr/local/bin/arcolinux-which-vga"
+alias whichvga="/usr/local/bin/edu-which-vga"
 
 #free
 alias free="free -mt"
@@ -247,9 +247,6 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 #switch between displaymanager or bootsystem
-alias toboot="sudo /usr/local/bin/arcolinux-toboot"
-alias togrub="sudo /usr/local/bin/arcolinux-togrub"
-alias torefind="sudo /usr/local/bin/arcolinux-torefind"
 alias tolightdm="sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm --needed ; sudo systemctl enable lightdm.service -f ; echo 'Lightm is active - reboot now'"
 alias tosddm="sudo pacman -S sddm --noconfirm --needed ; sudo systemctl enable sddm.service -f ; echo 'Sddm is active - reboot now'"
 alias toly="sudo pacman -S ly --noconfirm --needed ; sudo systemctl enable ly.service -f ; echo 'Ly is active - reboot now'"
@@ -299,9 +296,6 @@ alias mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --
 alias ram='rate-mirrors --allow-root --disable-comments arch | sudo tee /etc/pacman.d/mirrorlist'
 alias rams='rate-mirrors --allow-root --disable-comments --protocol https arch  | sudo tee /etc/pacman.d/mirrorlist'
 
-#mounting the folder Public for exchange between host and guest on virtualbox
-alias vbm="sudo /usr/local/bin/arcolinux-vbox-share"
-
 #enabling vmware services
 alias start-vmware="sudo systemctl enable --now vmtoolsd.service"
 alias vmware-start="sudo systemctl enable --now vmtoolsd.service"
@@ -326,10 +320,6 @@ alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+besta
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 
-#iso and version used to install ArcoLinux
-alias iso="cat /etc/dev-rel | awk -F '=' '/ISO/ {print $2}'"
-alias isoo="cat /etc/dev-rel"
-
 #Cleanup orphaned packages
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 
@@ -348,7 +338,6 @@ alias listaur="sudo pacman -Qqem"
 alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
 alias cls="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
 
-
 #search content with ripgrep
 alias rg="rg --sort path"
 
@@ -365,7 +354,7 @@ alias nconfgrub="sudo $EDITOR /boot/grub/grub.cfg"
 alias nmakepkg="sudo $EDITOR /etc/makepkg.conf"
 alias nmkinitcpio="sudo $EDITOR /etc/mkinitcpio.conf"
 alias nmirrorlist="sudo $EDITOR /etc/pacman.d/mirrorlist"
-alias narcomirrorlist="sudo $EDITOR /etc/pacman.d/arcolinux-mirrorlist"
+alias nchaoticmirrorlist="sudo $EDITOR /etc/pacman.d/chaotic-mirrorlist"
 alias nsddm="sudo $EDITOR /etc/sddm.conf"
 alias nsddmk="sudo $EDITOR /etc/sddm.conf.d/kde_settings.conf"
 alias nsddmd="sudo $EDITOR /usr/lib/sddm/sddm.conf.d/default.conf"
@@ -391,9 +380,9 @@ alias nemptty="sudo $EDITOR /etc/emptty/conf"
 alias nkitty="$EDITOR ~/.config/kitty/kitty.conf"
 
 #removing packages
-alias rvariety="arcolinux-remove-variety"
-alias rkmix="arcolinux-remove-kmix"
-alias rconky="arcolinux-remove-conky"
+alias rvariety="edu-remove-variety"
+alias rkmix="edu-remove-kmix"
+alias rconky="edu-remove-conky"
 
 #reading logs with bat
 alias lcalamares="bat /var/log/Calamares.log"
@@ -416,40 +405,31 @@ alias fix-keyserver="[ -d ~/.gnupg ] || mkdir ~/.gnupg ; cp /etc/pacman.d/gnupg/
 
 #fixes
 alias fix-permissions="sudo chown -R $USER:$USER ~/.config ~/.local"
-alias keyfix="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-alias key-fix="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-alias keys-fix="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-alias fixkey="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-alias fixkeys="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-alias fix-key="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-alias fix-keys="/usr/local/bin/arcolinux-fix-pacman-databases-and-keys"
-#fix-sddm-config is no longer an alias but an application - part of ATT
-#alias fix-sddm-config="/usr/local/bin/arcolinux-fix-sddm-config"
-alias fix-pacman-conf="/usr/local/bin/arcolinux-fix-pacman-conf"
-alias fix-pacman-keyserver="/usr/local/bin/arcolinux-fix-pacman-gpg-conf"
-alias fix-grub="sudo /usr/local/bin/arcolinux-fix-grub"
-alias fixgrub="sudo /usr/local/bin/arcolinux-fix-grub"
-alias fix-archlinux-mirrors="/usr/local/bin/arcolinux-fix-archlinux-servers"
-alias fix-arcolinux-mirrors="/usr/local/bin/arcolinux-fix-arcolinux-servers"
+alias keyfix="/usr/local/bin/edu-fix-pacman-databases-and-keys"
+alias key-fix="/usr/local/bin/edu-fix-pacman-databases-and-keys"
+alias keys-fix="/usr/local/bin/edu-fix-pacman-databases-and-keys"
+alias fixkey="/usr/local/bin/edu-fix-pacman-databases-and-keys"
+alias fixkeys="/usr/local/bin/edu-fix-pacman-databases-and-keys"
+alias fix-key="/usr/local/bin/edu-fix-pacman-databases-and-keys"
+alias fix-keys="/usr/local/bin/edu-fix-pacman-databases-and-keys"
+alias fix-pacman-conf="/usr/local/bin/edu-fix-pacman-conf"
+alias fix-pacman-keyserver="/usr/local/bin/edu-fix-pacman-gpg-conf"
+alias fix-archlinux-mirrors="/usr/local/bin/edu-fix-archlinux-servers"
 
 #maintenance
 alias big="expac -H M '%m\t%n' | sort -h | nl"
-alias downgrada="sudo downgrade --ala-url https://ant.seedhost.eu/arcolinux/"
 
 #hblock (stop tracking with hblock)
 #use unhblock to stop using hblock
 alias unhblock="hblock -S none -D none"
 
 #systeminfo
-alias probe="sudo arcolinux-probe"
+alias probe="sudo edu-probe"
 alias sysfailed="systemctl list-units --failed"
 
 #shutdown or reboot
 alias ssn="sudo shutdown now"
 alias sr="reboot"
-
-#update betterlockscreen images
-alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 
 #give the list of all installed desktops - xsessions desktops
 alias xd="ls /usr/share/xsessions"
@@ -458,9 +438,6 @@ alias xdw="ls /usr/share/wayland-sessions"
 #give a list of the kernels installed
 alias kernel="ls /usr/lib/modules"
 alias kernels="ls /usr/lib/modules"
-
-#am I on grub,systemd-boot or refind
-alias boot="sudo /usr/local/bin/arcolinux-boot"
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
@@ -489,40 +466,6 @@ ex ()
   fi
 }
 
-#wayland aliases
-alias wsimplescreen="wf-recorder -a"
-alias wsimplescreenrecorder="wf-recorder -a -c h264_vaapi -C aac -d /dev/dri/renderD128 --file=recording.mp4"
-
-#btrfs aliases
-alias btrfsfs="sudo btrfs filesystem df /"
-alias btrfsli="sudo btrfs su li / -t"
-
-#snapper aliases
-alias snapcroot="sudo snapper -c root create-config /"
-alias snapchome="sudo snapper -c home create-config /home"
-alias snapli="sudo snapper list"
-alias snapcr="sudo snapper -c root create"
-alias snapch="sudo snapper -c home create"
-
-#Leftwm aliases
-alias lti="leftwm-theme install"
-alias ltu="leftwm-theme uninstall"
-alias lta="leftwm-theme apply"
-alias ltupd="leftwm-theme update"
-alias ltupg="leftwm-theme upgrade"
-
-#arcolinux applications
-#att is a symbolic link now
-#alias att="archlinux-tweak-tool"
-alias adt="arcolinux-desktop-trasher"
-alias abl="arcolinux-betterlockscreen"
-alias agm="arcolinux-get-mirrors"
-alias amr="arcolinux-mirrorlist-rank-info"
-alias aom="arcolinux-osbeck-as-mirror"
-alias ars="arcolinux-reflector-simple"
-alias atm="arcolinux-tellme"
-alias avs="arcolinux-vbox-share"
-alias awa="arcolinux-welcome-app"
 
 #git
 alias rmgitcache="rm -r ~/.cache/git"
@@ -531,28 +474,7 @@ alias grh="git reset --hard"
 #pamac
 alias pamac-unlock="sudo rm /var/tmp/pamac/dbs/db.lock"
 
-#moving your personal files and folders from /personal to ~
-alias personal='cp -Rf /personal/* ~'
-
 #create a file called .zshrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
 
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
-
-# reporting tools - install when not installed
-#fastfetch
-#neofetch
-#screenfetch
-#alsi
-#paleofetch
-#fetch
-#hfetch
-#sfetch
-#ufetch
-#ufetch-arco
-#pfetch
-#sysinfo
-#sysinfo-retro
-#cpufetch
-#colorscript random
-#hyfetch

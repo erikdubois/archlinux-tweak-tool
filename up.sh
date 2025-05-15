@@ -19,6 +19,8 @@
 #tput setaf 8 = light blue
 ##################################################################################################################
 
+workdir=$(pwd)
+
 # reset - commit your changes or stash them before you merge
 # git reset --hard - personal alias - grh
 
