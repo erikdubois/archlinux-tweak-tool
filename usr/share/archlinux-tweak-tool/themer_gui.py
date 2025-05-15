@@ -63,7 +63,7 @@ def gui(self, Gtk, GdkPixbuf, vboxstack10, themer, fn, base_dir):
     self.i3_combo = Gtk.ComboBoxText()
     self.i3_combo.set_size_request(280, 0)
     if fn.os.path.isfile(fn.i3wm_config) and fn.check_package_installed(
-        "arcolinux-i3wm-git"
+        "edu-i3-git"
     ):
         themer.get_i3_themes(self.i3_combo, i3_list)
 
