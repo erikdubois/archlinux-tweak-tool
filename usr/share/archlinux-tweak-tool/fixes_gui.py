@@ -136,6 +136,16 @@ def gui(self, Gtk, vboxstack19, fn, fixes):
         "18",
         "19",
         "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
     ]
 
     btn_apply_parallel_downloads = Gtk.Button(label="Apply")
