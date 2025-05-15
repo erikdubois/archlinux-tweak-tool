@@ -82,14 +82,14 @@ def gui(self, Gtk, GdkPixbuf, vboxstack10, themer, fn, base_dir):
     lbls = Gtk.Label(label="Toggle polybar")
     self.poly = Gtk.Switch()
     if fn.os.path.isfile(fn.i3wm_config) and fn.check_package_installed(
-        "arcolinux-i3wm-git"
+        "edu-i3-git"
     ):
         if themer.check_polybar(themer.get_list(fn.i3wm_config)):
             self.poly.set_active(True)
     self.poly.connect("notify::active", self.on_polybar_toggle)
 
     if not fn.os.path.isfile(fn.i3wm_config) or not fn.check_package_installed(
-        "arcolinux-i3wm-git"
+        "edu-i3-git"
     ):
         applyi3.set_sensitive(False)
         reseti3.set_sensitive(False)
@@ -148,7 +148,7 @@ def gui(self, Gtk, GdkPixbuf, vboxstack10, themer, fn, base_dir):
     label2 = Gtk.Label("Select theme")
     self.store = Gtk.ListStore(int, str)
     if fn.os.path.isfile(fn.awesome_config) and fn.check_package_installed(
-        "arcolinux-awesome-git"
+        "edu-awesome-git"
     ):
         try:
             awesome_lines = themer.get_awesome_themes(awesome_list)
@@ -163,7 +163,7 @@ def gui(self, Gtk, GdkPixbuf, vboxstack10, themer, fn, base_dir):
     renderer_text = Gtk.CellRendererText()
 
     if fn.os.path.isfile(fn.awesome_config) and fn.check_package_installed(
-        "arcolinux-awesome-git"
+        "edu-awesome-git"
     ):
         try:
             val = int(
@@ -207,7 +207,7 @@ def gui(self, Gtk, GdkPixbuf, vboxstack10, themer, fn, base_dir):
     image_height = 598
 
     if fn.os.path.isfile(fn.awesome_config) and fn.check_package_installed(
-        "arcolinux-awesome-git"
+        "edu-awesome-git"
     ):
         try:
             pimage = GdkPixbuf.Pixbuf().new_from_file_at_size(
@@ -247,7 +247,7 @@ def gui(self, Gtk, GdkPixbuf, vboxstack10, themer, fn, base_dir):
     reset.connect("clicked", self.awesome_reset_clicked)
 
     if not fn.os.path.isfile(fn.awesome_config) or not fn.check_package_installed(
-        "arcolinux-awesome-git"
+        "edu-awesome-git"
     ):
         apply.set_sensitive(False)
         reset.set_sensitive(False)
@@ -274,7 +274,7 @@ def gui(self, Gtk, GdkPixbuf, vboxstack10, themer, fn, base_dir):
     self.qtile_combo = Gtk.ComboBoxText()
     self.qtile_combo.set_size_request(280, 0)
     if fn.os.path.isfile(fn.qtile_config_theme) and fn.check_package_installed(
-        "arcolinux-qtile-git"
+        "edu-qtile-git"
     ):
         themer.get_qtile_themes(self.qtile_combo, qtile_list)
 
@@ -291,7 +291,7 @@ def gui(self, Gtk, GdkPixbuf, vboxstack10, themer, fn, base_dir):
     resetqtile.connect("clicked", self.qtile_reset_clicked)
 
     if not fn.os.path.isfile(fn.qtile_config_theme) or not fn.check_package_installed(
-        "arcolinux-qtile-git"
+        "edu-qtile-git"
     ):
         applyqtile.set_sensitive(False)
         resetqtile.set_sensitive(False)
@@ -389,7 +389,7 @@ install them in one go"
     resetleftwm.connect("clicked", self.leftwm_reset_clicked)
 
     if not fn.os.path.isfile(fn.leftwm_config) or not fn.check_package_installed(
-        "arcolinux-leftwm-git"
+        "edu-leftwm-git"
     ):
         applyleftwm.set_sensitive(False)
         resetleftwm.set_sensitive(False)
