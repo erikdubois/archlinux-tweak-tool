@@ -167,6 +167,7 @@ alias updte='sudo pacman -Syyu'
 alias updqte='sudo pacman -Syyu'
 alias upqll='paru -Syu --noconfirm'
 alias upal='paru -Syu --noconfirm'
+alias u="sudo pacman -Syu"
 
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
@@ -267,6 +268,7 @@ alias hw="hwinfo --short"
 
 # fastfetch --short
 alias ff="fastfetch"
+alias neo="neofetch"
 
 # audio check pulseaudio or pipewire
 alias audio="pactl info | grep 'Server Name'"
@@ -378,6 +380,7 @@ alias nrefind="sudo $EDITOR /boot/refind_linux.conf"
 alias nalacritty="nano /home/$USER/.config/alacritty/alacritty.toml"
 alias nemptty="sudo $EDITOR /etc/emptty/conf"
 alias nkitty="$EDITOR ~/.config/kitty/kitty.conf"
+alias npicom="$EDITOR ~/.config/arco-chadwm/picom/picom.conf"
 
 #removing packages
 alias rvariety="edu-remove-variety"
