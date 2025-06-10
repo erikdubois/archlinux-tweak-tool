@@ -372,6 +372,7 @@ def install_desktop(self, desktop, state):
         check_package_and_remove(self, "catfish")
         command = budgie
     elif desktop == "chadwm":
+        check_package_and_remove(self, "arconet-xfce")
         command = list(np.append(chadwm, default_app))
         src.append("/etc/skel/.config/arco-chadwm")
         src.append("/etc/skel/.config/eww")
