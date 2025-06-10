@@ -59,6 +59,7 @@ if fn.distr:
         "autorandr",
         "awesome",
         "dmenu",
+        "edu-xfce-git",
         "feh",
         "lxappearance",
         "noto-fonts",
@@ -76,6 +77,7 @@ if fn.distr:
     bspwm = [
         "alacritty",
         "edu-bspwm-git",
+        "edu-xfce-git",
         "edu-polybar-git",
         "archlinux-logout-git",
         "edu-rofi-git",
@@ -263,6 +265,7 @@ if fn.distr:
     ]
     xfce = [
         "alacritty",
+        "edu-xfce-git",
         "xfce4",
         "xfce4-goodies",
         "catfish",
@@ -360,10 +363,12 @@ def install_desktop(self, desktop, state):
     check_package_and_remove(self, "rofi-lbonn-wayland-only-git")
 
     if desktop == "awesome":
+        check_package_and_remove(self, "arconet-xfce")
         command = list(np.append(awesome, default_app))
         src.append("/etc/skel/.config/awesome")
         twm = True
     elif desktop == "bspwm":
+        check_package_and_remove(self, "arconet-xfce")
         command = list(np.append(bspwm, default_app))
         src.append("/etc/skel/.config/bspwm")
         src.append("/etc/skel/.config/polybar")
@@ -382,10 +387,12 @@ def install_desktop(self, desktop, state):
     elif desktop == "gnome":
         command = gnome
     elif desktop == "i3":
+        check_package_and_remove(self, "arconet-xfce")
         command = list(np.append(i3, default_app))
         src.append("/etc/skel/.config/i3")
         twm = True
     elif desktop == "leftwm":
+        check_package_and_remove(self, "arconet-xfce")
         command = list(np.append(leftwm, default_app))
         src.append("/etc/skel/.config/leftwm")
         twm = True
@@ -398,10 +405,12 @@ def install_desktop(self, desktop, state):
         src.append("/etc/skel/.local/share")
         twm = True
     elif desktop == "qtile":
+        check_package_and_remove(self, "arconet-xfce")
         command = list(np.append(qtile, default_app))
         src.append("/etc/skel/.config/qtile")
         twm = True
     elif desktop == "xfce":
+        check_package_and_remove(self, "arconet-xfce")
         command = list(np.append(xfce, default_app))
 
     GLib.idle_add(self.desktopr_prog.set_fraction, 0.2)
