@@ -119,6 +119,7 @@ if fn.distr:
     chadwm = [
         "alacritty",
         "archlinux-logout-git",
+        "edu-chadwm-git",
         "edu-rofi-git",
         "edu-rofi-themes-git",
         "edu-xfce-git",
