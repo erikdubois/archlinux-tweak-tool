@@ -365,11 +365,13 @@ def install_desktop(self, desktop, state):
 
     if desktop == "awesome":
         check_package_and_remove(self, "arconet-xfce")
+        check_package_and_remove(self, "arcolinux-rofi-git")
         command = list(np.append(awesome, default_app))
         src.append("/etc/skel/.config/awesome")
         twm = True
     elif desktop == "bspwm":
         check_package_and_remove(self, "arconet-xfce")
+        check_package_and_remove(self, "arcolinux-rofi-git")
         command = list(np.append(bspwm, default_app))
         src.append("/etc/skel/.config/bspwm")
         src.append("/etc/skel/.config/polybar")
@@ -379,6 +381,7 @@ def install_desktop(self, desktop, state):
         command = budgie
     elif desktop == "chadwm":
         check_package_and_remove(self, "arconet-xfce")
+        check_package_and_remove(self, "arcolinux-rofi-git")
         command = list(np.append(chadwm, default_app))
         src.append("/etc/skel/.config/arco-chadwm")
         src.append("/etc/skel/.config/eww")
@@ -389,11 +392,13 @@ def install_desktop(self, desktop, state):
         command = gnome
     elif desktop == "i3":
         check_package_and_remove(self, "arconet-xfce")
+        check_package_and_remove(self, "arcolinux-rofi-git")
         command = list(np.append(i3, default_app))
         src.append("/etc/skel/.config/i3")
         twm = True
     elif desktop == "leftwm":
         check_package_and_remove(self, "arconet-xfce")
+        check_package_and_remove(self, "arcolinux-rofi-git")
         command = list(np.append(leftwm, default_app))
         src.append("/etc/skel/.config/leftwm")
         twm = True
@@ -407,6 +412,7 @@ def install_desktop(self, desktop, state):
         twm = True
     elif desktop == "qtile":
         check_package_and_remove(self, "arconet-xfce")
+        check_package_and_remove(self, "arcolinux-rofi-git")
         command = list(np.append(qtile, default_app))
         src.append("/etc/skel/.config/qtile")
         twm = True
