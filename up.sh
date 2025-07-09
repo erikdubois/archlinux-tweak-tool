@@ -41,6 +41,13 @@ echo "getting latest config.fish"
 wget https://raw.githubusercontent.com/erikdubois/edu-shells/refs/heads/main/etc/skel/.config/fish/config.fish -O $workdir/usr/share/archlinux-tweak-tool/data/arco/config.fish
 wget https://raw.githubusercontent.com/erikdubois/edu-shells/refs/heads/main/etc/skel/.config/fish/config.fish -O $workdir/usr/share/archlinux-tweak-tool/data/arch/config.fish
 
+########### Arch Linux
+rm $workdir/usr/share/archlinux-tweak-tool/data/arch/packages/keyring/*
+#rm $workdir/usr/share/archlinux-tweak-tool/data/arch/packages/mirrorlist/*
+#get latest archlinux-keyring
+wget https://archlinux.org/packages/core/any/archlinux-keyring/download --content-disposition -P $workdir/usr/share/archlinux-tweak-tool/data/arch/packages/keyring/
+#wget https://archlinux.org/packages/core/any/archlinux-mirrorlist/download --content-disposition -P $workdir/usr/share/archlinux-tweak-tool/data/arch/packages/mirrorlist/
+
 # Below command will backup everything inside the project folder
 git add --all .
 
