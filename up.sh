@@ -42,6 +42,7 @@ wget https://raw.githubusercontent.com/erikdubois/edu-shells/refs/heads/main/etc
 wget https://raw.githubusercontent.com/erikdubois/edu-shells/refs/heads/main/etc/skel/.config/fish/config.fish -O $workdir/usr/share/archlinux-tweak-tool/data/arch/config.fish
 
 ########### Arch Linux
+echo "getting archlinux keyring"
 rm $workdir/usr/share/archlinux-tweak-tool/data/arch/packages/keyring/*
 #rm $workdir/usr/share/archlinux-tweak-tool/data/arch/packages/mirrorlist/*
 #get latest archlinux-keyring
