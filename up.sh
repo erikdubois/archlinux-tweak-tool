@@ -21,7 +21,7 @@
 
 workdir=$(pwd)
 
-#./chaotic
+./chaotic
 
 # reset - commit your changes or stash them before you merge
 # git reset --hard - personal alias - grh
