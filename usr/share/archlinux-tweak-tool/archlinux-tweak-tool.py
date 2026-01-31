@@ -1787,7 +1787,7 @@ class Main(Gtk.Window):
         fn.remove_package_s(self,"edu-shells-git")
         fn.remove_package_s(self,"fish")
         print("Bash, Zsh and Fish is removed from /etc/skel - remove the folder in ~/.config/fish manually")
-        fn.show_in_app_notificatio(
+        fn.show_in_app_notification(
             self, "Bash, Zsh and Fish is removed from /etc/skel - remove the folder in ~/.config/fish manually"
         )
 
