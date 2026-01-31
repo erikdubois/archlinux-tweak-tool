@@ -1784,8 +1784,8 @@ class Main(Gtk.Window):
         fn.show_in_app_notification(self, "Fish config reset")
 
     def on_remove_fish_all(self, widget):
-        fn.remove_package_s("edu-shells-git")
-        fn.remove_package_s("fish")
+        fn.remove_package("edu-shells-git")
+        fn.remove_package("fish")
         print("Bash, Zsh and Fish is removed from /etc/skel - remove the folder in ~/.config/fish manually")
         fn.show_in_app_notificatio(
             self, "Bash, Zsh and Fish is removed from /etc/skel - remove the folder in ~/.config/fish manually"
