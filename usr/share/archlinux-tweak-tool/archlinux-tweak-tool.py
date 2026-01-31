@@ -1705,8 +1705,8 @@ class Main(Gtk.Window):
         fn.remove_package(self, "fish")
 
     def on_arcolinux_fish_package_clicked(self, widget):
-        fn.install_arco_package(self, "arcolinux-fish-git")
-        if fn.check_package_installed("arcolinux-fish-git") is True:
+        fn.install_arco_package(self, "edu-shells-git")
+        if fn.check_package_installed("edu-shells-git") is True:
             # backup whatever is there
             if fn.path_check(fn.home + "/.config/fish"):
                 now = datetime.datetime.now()
@@ -1784,11 +1784,11 @@ class Main(Gtk.Window):
         fn.show_in_app_notification(self, "Fish config reset")
 
     def on_remove_fish_all(self, widget):
-        fn.remove_package_s("arcolinux-fish-git")
+        fn.remove_package_s("edu-shells-git")
         fn.remove_package_s("fish")
-        print("Fish is removed - remove the folder in ~/.config/fish manually")
+        print("Bash, Zsh and Fish is removed from /etc/skel - remove the folder in ~/.config/fish manually")
         fn.show_in_app_notificatio(
-            self, "Fish is removed - remove the folder in ~/.config/fish manually"
+            self, "Bash, Zsh and Fish is removed from /etc/skel - remove the folder in ~/.config/fish manually"
         )
 
     def tofish_apply(self, widget):

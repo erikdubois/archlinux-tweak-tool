@@ -391,9 +391,9 @@ If you just switched shell, log-out first</b>\n"
 
         hbox33 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=0)
         hbox33_lbl = Gtk.Label()
-        if fn.check_package_installed("arcolinux-fish-git"):
+        if fn.check_package_installed("edu-shells-git"):
             hbox33_lbl.set_markup(
-                "ATT fish incl. oh-my-fish, themes and plugins is already <b>installed</b>"
+                "ATT bash, zsh and fish incl. oh-my-fish, themes and plugins is already <b>installed</b>"
             )
         else:
             hbox33_lbl.set_markup(
