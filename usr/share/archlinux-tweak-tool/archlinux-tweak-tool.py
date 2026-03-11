@@ -87,6 +87,8 @@ class Main(Gtk.Window):
         print(" - ParchLinux    - https://parchlinux.ir/")
         print(" - RebornOS      - https://rebornos.org/")
         print(" - StormOS       - https://sourceforge.net/projects/hackman-linux/")
+        print(" - Nyarch        - https://nyarchlinux.moe/")
+        print(" - BerserkerOS   - https://berserkarch.xyz/")
         print(
             "---------------------------------------------------------------------------"
         )
