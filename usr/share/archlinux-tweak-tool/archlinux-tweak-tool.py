@@ -87,6 +87,7 @@ class Main(Gtk.Window):
         print(" - Manjaro       - https://manjaro.org/")
         print(" - Nyarch        - https://nyarchlinux.moe/")
         print(" - ParchLinux    - https://parchlinux.ir/")
+        print(" - PrismLinux    - https://www.prismlinux.org/")
         print(" - RebornOS      - https://rebornos.org/")
         print(" - StormOS       - https://sourceforge.net/projects/hackman-linux/")
         print(
