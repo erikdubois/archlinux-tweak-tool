@@ -73,6 +73,7 @@ class Main(Gtk.Window):
         print(" - Ariser        - https://ariser.eu/")
         print(" - Artix         - https://artixlinux.org/")
         print(" - Axyl          - https://axyl-os.github.io/")
+        print(" - BerserkerOS   - https://berserkarch.xyz/")
         print(" - BigLinux      - https://www.biglinux.com.br/")
         print(" - Bluestar      - https://sourceforge.net/projects/bluestarlinux/")
         print(" - CachyOS       - https://cachyos.org/")
@@ -84,11 +85,10 @@ class Main(Gtk.Window):
         print(" - Liya          - https://sourceforge.net/projects/liya-2024/")
         print(" - Mabox         - https://maboxlinux.org/")
         print(" - Manjaro       - https://manjaro.org/")
+        print(" - Nyarch        - https://nyarchlinux.moe/")
         print(" - ParchLinux    - https://parchlinux.ir/")
         print(" - RebornOS      - https://rebornos.org/")
         print(" - StormOS       - https://sourceforge.net/projects/hackman-linux/")
-        print(" - Nyarch        - https://nyarchlinux.moe/")
-        print(" - BerserkerOS   - https://berserkarch.xyz/")
         print(
             "---------------------------------------------------------------------------"
         )
