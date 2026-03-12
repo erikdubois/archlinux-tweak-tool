@@ -83,6 +83,7 @@ class Main(Gtk.Window):
         print(" - EndeavourOS   - https://endeavouros.com/")
         print(" - Garuda        - https://garudalinux.org/")
         print(" - Liya          - https://sourceforge.net/projects/liya-2024/")
+        print(" - LinuxHub Prime - https://linuxhub.link/")
         print(" - Mabox         - https://maboxlinux.org/")
         print(" - Manjaro       - https://manjaro.org/")
         print(" - Nyarch        - https://nyarchlinux.moe/")
