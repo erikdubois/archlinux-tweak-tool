@@ -75,6 +75,7 @@ class Main(Gtk.Window):
         print(" - Axyl          - https://axyl-os.github.io/")
         print(" - BerserkerOS   - https://berserkarch.xyz/")
         print(" - BigLinux      - https://www.biglinux.com.br/")
+        print(" - BlendOS       - https://blendos.co/")
         print(" - Bluestar      - https://sourceforge.net/projects/bluestarlinux/")
         print(" - CachyOS       - https://cachyos.org/")
         print(" - Calam-arch    - https://sourceforge.net/projects/blue-arch-installer/")
