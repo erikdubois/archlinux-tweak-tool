@@ -44,10 +44,6 @@ function reload
     echo "reloading: $config"
 end
 
-# User paths
-set -e fish_user_paths
-set -U fish_user_paths $HOME/.bin $HOME/.local/bin $HOME/Applications $fish_user_paths
-
 # Starship prompt
 #if command -sq starship
 #    starship init fish | source
@@ -73,15 +69,6 @@ set -x FZF_DEFAULT_OPTS "--color=16,header:13,info:5,pointer:3,marker:9,spinner:
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -x MANROFFOPT "-c"
 set -g theme_nerd_fonts yes
-
-
-if status --is-login
-    set -gx PATH $PATH ~/.bin
-end
-
-if status --is-login
-    set -gx PATH $PATH ~/.local/bin
-end
 
 if type -q bat
     alias cat="bat --paging=never"
@@ -231,6 +218,7 @@ alias updqte="sudo pacman -Syyu"
 alias upqll="paru -Syu --noconfirm"
 alias upal="paru -Syu --noconfirm"
 alias u="sudo pacman -Syyu"
+alias up="./up.sh"
 
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep="grep --color=auto"
