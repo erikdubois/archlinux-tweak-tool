@@ -601,7 +601,7 @@ class Main(Gtk.Window):
                 except OSError as e:
                     # This will ONLY execute if the sddm files and the underlying sddm files do not exist
                     if e.errno == 2:
-                        command = "/usr/local/bin/arcolinux-fix-sddm-config"
+                        command = "/usr/local/bin/fix-sddm-config"
                         fn.subprocess.call(
                             command,
                             shell=True,
