@@ -217,6 +217,7 @@ alias updte="sudo pacman -Syyu"
 alias updqte="sudo pacman -Syyu"
 alias upqll="paru -Syu --noconfirm"
 alias upal="paru -Syu --noconfirm"
+alias ua="paru -Syu --noconfirm"
 alias u="sudo pacman -Syyu"
 alias up="./up.sh"
 
