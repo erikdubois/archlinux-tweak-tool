@@ -392,6 +392,7 @@ alias rg="rg --sort path"
 
 #get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
+alias jclean="sudo journalctl --rotate && sudo journalctl --vacuum-time=1s"
 
 #nano for important configuration files
 #know what you do in these files
